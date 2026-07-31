@@ -1,0 +1,33 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "medicine-intake",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/medicine-intake.destination.json",
+  "title": "Medicine Intake",
+  "description": "Medicine Intake",
+  "color": "#F44336",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "SHARED",
+  "visibility": "PUBLIC",
+  "spreadsheetId": "12ZMCqBv2rnVWF6AH3WHBQVyovchd9oyz0fcwX0niGgo",
+  "gid": "0",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/medicine-intake.schema.json",
+  "attachmentPolicy": null,
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-07-31T05:05:02Z",
+  "issuedAt": "2026-07-31T05:05:02Z",
+  "expiresAt": "2027-07-31T05:05:02Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-07-31T05:05:02Z",
+    "issuedAt": "2026-07-31T05:05:02Z",
+    "expiresAt": "2027-07-31T05:05:02Z",
+    "signature": "wp4k67DvYJwmEq8f+Zf4nUjodZbp/+VBmU4pqbxtR4EDOZ6S3Ik8Bj/AGwanB/O2MyrE4NU+E9ViPdLr1e6UBA=="
+  }
+}

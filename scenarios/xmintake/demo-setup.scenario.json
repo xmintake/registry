@@ -1,0 +1,56 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "version": "2.0",
+  "createdBy": "xmintake",
+  "description": "Product demo: create a QA workspace and a sheet destination from the feedback schema.",
+  "permissions": [
+    "navigate",
+    "addDestination",
+    "verifyAssertion"
+  ],
+  "scenario": {
+    "name": "Demo setup",
+    "description": "Creates workspace QA_Demo and a feedback sheet destination (non-destructive; does not reset).",
+    "steps": [
+      {
+        "id": "create-ws",
+        "description": "Create demo workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "QA_Demo"
+        },
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          }
+        ]
+      },
+      {
+        "id": "create-sheet-dest",
+        "description": "Create spreadsheet + destination from feedback schema",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/create-sheet-from-schema",
+        "params": {
+          "workspaceName": "QA_Demo",
+          "schemaUrl": "https://xmintake.github.io/data-schemas/schemas/xmintake/feedback.schema.json",
+          "spreadsheetName": "QA_Demo_Feedback",
+          "tabName": "Intake",
+          "title": "QA Demo Intake"
+        },
+        "timeoutMs": 60000,
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          }
+        ]
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "pj0i44ltcd9bHNTAN/g77GdfSqbZ3nFXlkAE1K3BjRP9EkYucEFsBbnEGOsWET62Eml1RSDa8tSi/QM3nWu4AQ=="
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "version": "2.0",
+  "createdBy": "xmintake",
+  "description": "Release QA Pack B — reset config and bootstrap QA_Release workspace + feedback destination.",
+  "permissions": [
+    "navigate",
+    "changeSetting",
+    "addDestination",
+    "verifyAssertion"
+  ],
+  "scenario": {
+    "name": "Pack B — config bootstrap",
+    "description": "DESTRUCTIVE: resets XMIntake config, then creates QA_Release + sheet from feedback schema.",
+    "steps": [
+      {
+        "id": "reset",
+        "description": "Reset XMIntake configuration",
+        "appLink": "https://xmintake.xmarin.dev/s/settings/reset",
+        "timeoutMs": 30000,
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          }
+        ]
+      },
+      {
+        "id": "create-ws",
+        "description": "Create QA_Release workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "QA_Release"
+        },
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          },
+          {
+            "type": "greaterThan",
+            "target": "state.workspaceCount",
+            "expected": 0
+          }
+        ]
+      },
+      {
+        "id": "create-sheet-dest",
+        "description": "Create spreadsheet + destination from feedback schema",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/create-sheet-from-schema",
+        "params": {
+          "workspaceName": "QA_Release",
+          "schemaUrl": "https://xmintake.github.io/data-schemas/schemas/xmintake/feedback.schema.json",
+          "spreadsheetName": "QA_Release_Feedback",
+          "tabName": "Intake",
+          "title": "QA Release Intake"
+        },
+        "timeoutMs": 60000,
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          },
+          {
+            "type": "greaterThan",
+            "target": "state.workspaceDestinationCount",
+            "expected": 0
+          }
+        ]
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "tfBFjGzMym/TddvyHZ1/fGPjQaYfCkrDZ0rj1vMcAef6ZWmfz7cRr5RXAXcJQq1eQJRMgl7vr2hbDkfmX6mjCw=="
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "generatedAt": "2026-07-31T19:50:16Z",
+  "categories": [
+    {
+      "id": "getting-started",
+      "label": "Getting started"
+    },
+    {
+      "id": "health-wellness",
+      "label": "Health & wellness"
+    },
+    {
+      "id": "feedback",
+      "label": "Feedback & support"
+    },
+    {
+      "id": "field-work",
+      "label": "Field work"
+    },
+    {
+      "id": "education",
+      "label": "Education"
+    },
+    {
+      "id": "other",
+      "label": "Other"
+    }
+  ],
+  "destinations": [
+    {
+      "id": "medicine-intake",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Medicine Intake",
+      "description": "Medicine Intake",
+      "color": "#F44336",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/medicine-intake.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/medicine-intake.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fmedicine-intake.destination.json",
+      "tags": [],
+      "primaryCategory": null,
+      "issuedAt": "2026-07-31T05:05:02Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Family Member",
+          "kind": "choice",
+          "required": true,
+          "hint": "5 options; custom values allowed"
+        },
+        {
+          "name": "Medication",
+          "kind": "choice",
+          "required": true,
+          "hint": "2 options; custom values allowed"
+        },
+        {
+          "name": "Dosage",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options; custom values allowed"
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "timer-test",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Timer",
+      "description": "Timer Test",
+      "color": "#4CAF50",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/timer-test.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/timer-test.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Ftimer-test.destination.json",
+      "tags": [],
+      "primaryCategory": null,
+      "issuedAt": "2026-07-31T04:14:49Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Action",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Time",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "xmintake-demo-restricted",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "XMIntake Demo Restricted",
+      "description": "Router demo destination restricted to xmintakedemo@gmail.com. Routes submissions to a private Google Sheet tab via the XMIntake destination router.",
+      "color": "#1976D2",
+      "destinationType": "CUSTOM_API",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/xmintake-demo-restricted.destination.json",
+      "schemaUrl": "https://xmintake.github.io/data-schemas/schemas/xmintake/router-demo.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fxmintake-demo-restricted.destination.json",
+      "tags": [],
+      "primaryCategory": null,
+      "issuedAt": "2026-06-30T08:00:00Z",
+      "hasAttachments": false,
+      "previewFields": []
+    },
+    {
+      "id": "xmintake-feedback",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "XMIntake Feedback",
+      "description": "Submit feedback, ideas, and bug reports about XMIntake. Attach a photo when helpful.",
+      "color": "#8BC34A",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/xmintake-feedback.destination.json",
+      "schemaUrl": "https://xmintake.github.io/data-schemas/schemas/xmintake/feedback.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fxmintake-feedback.destination.json",
+      "tags": [],
+      "primaryCategory": null,
+      "issuedAt": "2026-06-22T08:00:00Z",
+      "hasAttachments": false,
+      "previewFields": []
+    },
+    {
+      "id": "xmintake-router-demo",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "XMIntake Router Demo",
+      "description": "Demo custom API destination routed through the XMIntake destination router to a private Google Sheet.",
+      "color": "#2196F3",
+      "destinationType": "CUSTOM_API",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/xmintake-router-demo.destination.json",
+      "schemaUrl": "https://xmintake.github.io/data-schemas/schemas/xmintake/router-demo.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fxmintake-router-demo.destination.json",
+      "tags": [],
+      "primaryCategory": null,
+      "issuedAt": "2026-06-30T08:00:00Z",
+      "hasAttachments": false,
+      "previewFields": []
+    }
+  ],
+  "schemas": [
+    {
+      "id": "medicine-intake",
+      "publisherSlug": "xmintake",
+      "title": "Intake Form",
+      "description": "Intake Form",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/medicine-intake.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fmedicine-intake.schema.json",
+      "linkedDestinationIds": [
+        "medicine-intake"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Family Member",
+          "kind": "choice",
+          "required": true,
+          "hint": "5 options; custom values allowed"
+        },
+        {
+          "name": "Medication",
+          "kind": "choice",
+          "required": true,
+          "hint": "2 options; custom values allowed"
+        },
+        {
+          "name": "Dosage",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options; custom values allowed"
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "timer-test",
+      "publisherSlug": "xmintake",
+      "title": "Intake Form",
+      "description": "Intake Form",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/timer-test.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ftimer-test.schema.json",
+      "linkedDestinationIds": [
+        "timer-test"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Action",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Time",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

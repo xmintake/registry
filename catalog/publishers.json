@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-07-31T19:50:16Z",
+  "publishers": [
+    {
+      "publisherSlug": "xmintake",
+      "publisherId": "pub_xmintake",
+      "publisherStatus": "ACTIVE",
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151",
+      "tagline": null
+    }
+  ]
+}

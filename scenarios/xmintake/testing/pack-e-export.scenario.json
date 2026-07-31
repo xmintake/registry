@@ -1,0 +1,36 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "version": "2.0",
+  "createdBy": "xmintake",
+  "description": "Release QA Pack E — export config to Drive (import confirmation remains Script R).",
+  "permissions": [
+    "changeSetting",
+    "verifyAssertion"
+  ],
+  "scenario": {
+    "name": "Pack E — export",
+    "description": "Exports current config to XMIntake/Exports as ReleaseSmoke.",
+    "steps": [
+      {
+        "id": "export",
+        "description": "Export to Drive",
+        "appLink": "https://xmintake.xmarin.dev/s/settings/export",
+        "params": {
+          "name": "ReleaseSmoke"
+        },
+        "timeoutMs": 60000,
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          }
+        ]
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "Wcw/1jYPwrW8+J+hTIoGsp/mN8eywakX9+JoJvr+Xu70fHHRpJVVlXaWc9u/Bib4TivL43wdEc/MLBmmHpieCg=="
+  }
+}

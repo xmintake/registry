@@ -1,0 +1,30 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/spec/registry/registry-destination.schema.json",
+  "id": "xmintake-feedback",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/xmintake-feedback.destination.json",
+  "title": "XMIntake Feedback",
+  "description": "Submit feedback, ideas, and bug reports about XMIntake. Attach a photo when helpful.",
+  "color": "#8BC34A",
+  "destinationType": "GOOGLE_SHEET",
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-06-01T08:00:00Z",
+  "issuedAt": "2026-06-22T08:00:00Z",
+  "expiresAt": "2027-06-22T08:00:00Z",
+  "spreadsheetId": "1y8iX-bzEH4p_DnHk7XSSvN3I11wPsDfOcsP1sDx3s8c",
+  "gid": "297467135",
+  "schemaUrl": "https://xmintake.github.io/data-schemas/schemas/xmintake/feedback.schema.json",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-000-000-0000"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-06-01T08:00:00Z",
+    "issuedAt": "2026-06-22T08:00:00Z",
+    "expiresAt": "2027-06-22T08:00:00Z",
+    "signature": "YqvlGP8YMsdSzM2/dRd3x0DvFMGC/G+5NYhQKWBoXo3pqQOtLqaM1kD8h1cmrvMSc24hCutkGJfCSdi+hkpgAA=="
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-schema.v1.json",
+  "schemaId": "dev.xmarin.xmintake.schemas.timer",
+  "schemaVersion": "0.1",
+  "description": "Intake Form",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true,
+      "description": "Something for the date. "
+    },
+    "Action": {
+      "type": "enum",
+      "label": "Action",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Action",
+          "Prepare dough for bread",
+          "Put bread to bake"
+        ],
+        "acceptNewValues": false
+      },
+      "description": "Action stuff. "
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "description": "Djdhdhdbdb djdbd dd. ",
+      "uiVariant": "multi_line"
+    },
+    "Time": {
+      "type": "date",
+      "label": "Time",
+      "nullable": true,
+      "description": "Hdhdhd fjfbd fhfbdf fuf r brfbf fjfb"
+    }
+  },
+  "sharePayloadMapping": {
+    "sharedText": "Notes"
+  },
+  "shareTextMakeLink": true
+}

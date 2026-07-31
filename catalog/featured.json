@@ -1,0 +1,6 @@
+{
+  "heroTitle": "Certified intake destinations for XMIntake",
+  "heroSubtitle": "Install a form and Google Sheet destination in seconds.",
+  "featuredDestinationIds": ["xmintake-feedback", "medicine-intake"],
+  "pinnedCategoryIds": ["getting-started", "feedback"]
+}

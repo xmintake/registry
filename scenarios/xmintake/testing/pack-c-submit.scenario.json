@@ -1,0 +1,47 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "version": "2.0",
+  "createdBy": "xmintake",
+  "description": "Release QA Pack C — form open + autosubmit enqueue (run after Pack B). Requires network and Sheets access.",
+  "permissions": [
+    "navigate",
+    "setFields",
+    "submitForm",
+    "verifyAssertion"
+  ],
+  "scenario": {
+    "name": "Pack C — submit & queue",
+    "description": "Opens QA_Release form with required Title and autosubmits into the upload queue.",
+    "steps": [
+      {
+        "id": "autosubmit",
+        "description": "Open form and autosubmit",
+        "appLink": "https://xmintake.xmarin.dev/f/dest",
+        "params": {
+          "ws": "QA_Release",
+          "Title": "QA_pack_c_autosubmit",
+          "Details": "Release pack C",
+          "autosubmit": "1",
+          "gsrc": "qr"
+        },
+        "timeoutMs": 60000,
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          },
+          {
+            "type": "valueEquals",
+            "target": "response.uploaded",
+            "expected": true
+          }
+        ]
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "bP9EpDsSZsRnReo7Wr9o3u/spru6qApby3Goyh3jIq3I7rJuBKyfagXuoIrPNPAc9ysIFkjrlJyyHwei5/n4AQ=="
+  }
+}

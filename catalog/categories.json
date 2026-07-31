@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "categories": [
+    { "id": "getting-started", "label": "Getting started" },
+    { "id": "health-wellness", "label": "Health & wellness" },
+    { "id": "feedback", "label": "Feedback & support" },
+    { "id": "field-work", "label": "Field work" },
+    { "id": "education", "label": "Education" },
+    { "id": "other", "label": "Other" }
+  ]
+}

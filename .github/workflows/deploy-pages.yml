@@ -1,0 +1,51 @@
+name: Deploy registry Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: registry-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble GitHub Pages site
+        run: |
+          set -euo pipefail
+          mkdir -p site
+          cp -R destinations schemas catalog scenarios site/
+          cp XMRegistry.public-key.pem site/
+          # Browse SPA (index.html + assets) lives at repo root when synced from registry-ops
+          if [ -f index.html ]; then
+            cp index.html site/
+            cp -R assets site/ 2>/dev/null || true
+          fi
+          if [ -f CNAME ]; then
+            cp CNAME site/
+          fi
+          if [ -f site/index.html ] && [ ! -f site/404.html ]; then
+            cp site/index.html site/404.html
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        environment:
+          name: github-pages
+          url: ${{ steps.deployment.outputs.page_url }}

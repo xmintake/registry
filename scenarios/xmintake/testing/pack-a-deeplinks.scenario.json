@@ -1,0 +1,60 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "version": "2.0",
+  "createdBy": "xmintake",
+  "description": "Release QA Pack A — deep-link smoke (run after Pack B so QA_Release exists).",
+  "permissions": [
+    "navigate",
+    "setFields",
+    "shareText",
+    "verifyAssertion"
+  ],
+  "scenario": {
+    "name": "Pack A — deep links",
+    "description": "Opens form for QA_Release with prefill, then share-ingestion link.",
+    "steps": [
+      {
+        "id": "open-form-prefill",
+        "description": "Open QA_Release form with Title prefilled",
+        "appLink": "https://xmintake.xmarin.dev/f/dest",
+        "params": {
+          "ws": "QA_Release",
+          "Title": "QA_pack_a_prefill",
+          "gsrc": "qr"
+        },
+        "timeoutMs": 30000,
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          },
+          {
+            "type": "exists",
+            "target": "response.destinationId"
+          }
+        ]
+      },
+      {
+        "id": "share-ingestion",
+        "description": "Open Share with a Google Sheet URL payload",
+        "appLink": "https://xmintake.xmarin.dev/x/share",
+        "params": {
+          "text": "https://docs.google.com/spreadsheets/d/example/edit#gid=0",
+          "gsrc": "qr"
+        },
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          }
+        ]
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "pqt0KMbHdz7rusLyoZyIxKIe0jMgbzUW3tDPVF1wK4TDbt1paBVkNAsDpkm/B8Cikr6qm1QiHeyPG0qmQkvoDA=="
+  }
+}

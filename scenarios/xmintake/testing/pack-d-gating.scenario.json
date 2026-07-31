@@ -1,0 +1,39 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "version": "2.0",
+  "createdBy": "xmintake",
+  "description": "Release QA Pack D — staging for plan gating. Stops before Play purchase (finish with Script R).",
+  "permissions": [
+    "navigate",
+    "setFields",
+    "verifyAssertion"
+  ],
+  "scenario": {
+    "name": "Pack D — gating staging",
+    "description": "Opens QA_Release form with gsrc=qr to exercise automation-link gating path. Purchase/restore remain manual.",
+    "steps": [
+      {
+        "id": "open-form-qr-gated",
+        "description": "Open form via QR-tagged deep link",
+        "appLink": "https://xmintake.xmarin.dev/f/dest",
+        "params": {
+          "ws": "QA_Release",
+          "Title": "QA_pack_d_gating",
+          "gsrc": "qr"
+        },
+        "timeoutMs": 30000,
+        "assertions": [
+          {
+            "type": "valueEquals",
+            "target": "lastAction.success",
+            "expected": true
+          }
+        ]
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "4Hdvat1KgHl6So3Rrk31ip80elfq21VwMIYsCMRbNFUfcF7V6/6mZOi41S+B8teQ3V7+rWRwNd1L2/fUZ07SDw=="
+  }
+}

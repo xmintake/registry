@@ -1,0 +1,33 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "timer-test",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/timer-test.destination.json",
+  "title": "Timer",
+  "description": "Timer Test",
+  "color": "#4CAF50",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "SHARED",
+  "visibility": "PUBLIC",
+  "spreadsheetId": "1SIw5NGtVyWonCWptZ8g_7408citeF8DEI2yldPbQtAk",
+  "gid": "1822191364",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/timer-test.schema.json",
+  "attachmentPolicy": null,
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-07-31T04:14:49Z",
+  "issuedAt": "2026-07-31T04:14:49Z",
+  "expiresAt": "2027-07-31T04:14:49Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-07-31T04:14:49Z",
+    "issuedAt": "2026-07-31T04:14:49Z",
+    "expiresAt": "2027-07-31T04:14:49Z",
+    "signature": "iFfgkE2AgliwNFmMCha0E5ND09wY6OpRzDJ3bweNO7jgFEx5PFtkSzsF5CQRQLIe1QzP7FZTgN0fvdTZqCT3DQ=="
+  }
+}

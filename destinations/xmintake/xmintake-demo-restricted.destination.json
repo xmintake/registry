@@ -1,0 +1,30 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/spec/registry/registry-destination.schema.json",
+  "id": "xmintake-demo-restricted",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/xmintake-demo-restricted.destination.json",
+  "title": "XMIntake Demo Restricted",
+  "description": "Router demo destination restricted to xmintakedemo@gmail.com. Routes submissions to a private Google Sheet tab via the XMIntake destination router.",
+  "color": "#1976D2",
+  "destinationType": "CUSTOM_API",
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-06-01T08:00:00Z",
+  "issuedAt": "2026-06-30T08:00:00Z",
+  "expiresAt": "2027-06-30T08:00:00Z",
+  "endpointUrl": "https://destination-router-service-749963141063.us-central1.run.app/destinations/xmintake-demo-restricted/submissions",
+  "schemaUrl": "https://xmintake.github.io/data-schemas/schemas/xmintake/router-demo.schema.json",
+  "apiAuth": "GOOGLE_ID_TOKEN",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-000-000-0000"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-06-01T08:00:00Z",
+    "issuedAt": "2026-06-30T08:00:00Z",
+    "expiresAt": "2027-06-30T08:00:00Z",
+    "signature": "L0h34gPRESmGTCjTVYxlTdmb7kN9UpCLWTSD3b9tOYcSyYSfCDNGVWAgrUnoZAS49B/oGkYZTQG2G9Y935pqBg=="
+  }
+}

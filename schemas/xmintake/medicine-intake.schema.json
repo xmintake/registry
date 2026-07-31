@@ -1,0 +1,57 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.medicine-intake",
+  "schemaVersion": "0.1",
+  "description": "Intake Form",
+  "fields": {
+    "Family Member": {
+      "type": "enum",
+      "label": "Family Member",
+      "nullable": false,
+      "enum": {
+        "values": [
+          "John",
+          "Joahna",
+          "Adam",
+          "Becker",
+          "Cindy"
+        ],
+        "acceptNewValues": true
+      }
+    },
+    "Medication": {
+      "type": "enum",
+      "label": "Medication",
+      "nullable": false,
+      "enum": {
+        "values": [
+          "Tylenol",
+          "Ibuprofen"
+        ],
+        "acceptNewValues": true
+      }
+    },
+    "Dosage": {
+      "type": "enum",
+      "label": "Dosage",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Option 1",
+          "Option 2",
+          "15 ML"
+        ],
+        "acceptNewValues": true
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  },
+  "sharePayloadMapping": {
+    "sharedText": "Notes"
+  }
+}

@@ -1,0 +1,4 @@
+# Never commit the registry signing private key.
+XMRegistry.private-key.pem
+*.private-key.pem
+.DS_Store

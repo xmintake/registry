@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-07-31T19:50:16Z",
+  "destinations": [
+    {
+      "id": "medicine-intake",
+      "title": "Medicine Intake",
+      "description": "Medicine Intake",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/medicine-intake.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [],
+      "primaryCategory": null
+    },
+    {
+      "id": "timer-test",
+      "title": "Timer",
+      "description": "Timer Test",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/timer-test.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [],
+      "primaryCategory": null
+    },
+    {
+      "id": "xmintake-demo-restricted",
+      "title": "XMIntake Demo Restricted",
+      "description": "Router demo destination restricted to xmintakedemo@gmail.com. Routes submissions to a private Google Sheet tab via the XMIntake destination router.",
+      "destinationType": "CUSTOM_API",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/xmintake-demo-restricted.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [],
+      "primaryCategory": null
+    },
+    {
+      "id": "xmintake-feedback",
+      "title": "XMIntake Feedback",
+      "description": "Submit feedback, ideas, and bug reports about XMIntake. Attach a photo when helpful.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/xmintake-feedback.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [],
+      "primaryCategory": null
+    },
+    {
+      "id": "xmintake-router-demo",
+      "title": "XMIntake Router Demo",
+      "description": "Demo custom API destination routed through the XMIntake destination router to a private Google Sheet.",
+      "destinationType": "CUSTOM_API",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/xmintake-router-demo.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [],
+      "primaryCategory": null
+    }
+  ]
+}
