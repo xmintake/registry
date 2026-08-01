@@ -1,0 +1,74 @@
+name: Promote pending submissions (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      pending_path:
+        description: "Relative path, e.g. submissions/pending/mm/test-1222 (empty = all pending folders on main)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Resolve pending directories
+        id: pending
+        run: |
+          set -euo pipefail
+          input="${{ inputs.pending_path }}"
+          if [ -n "$input" ]; then
+            dirs=("$input")
+          else
+            mapfile -t dirs < <(find submissions/pending -mindepth 2 -maxdepth 2 -type d | sort)
+          fi
+          if [ "${#dirs[@]}" -eq 0 ]; then
+            echo "none=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          {
+            echo "dirs<<EOF"
+            printf '%s\n' "${dirs[@]}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Promote submissions
+        if: steps.pending.outputs.none != 'true'
+        env:
+          XMREGISTRY_PRIVATE_KEY: ${{ secrets.XMREGISTRY_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${XMREGISTRY_PRIVATE_KEY:-}" ]; then
+            echo "XMREGISTRY_PRIVATE_KEY repository secret is not configured." >&2
+            exit 1
+          fi
+          umask 077
+          printf '%s' "$XMREGISTRY_PRIVATE_KEY" > /tmp/XMRegistry.private-key.pem
+          while IFS= read -r dir; do
+            [ -z "$dir" ] && continue
+            echo "Promoting $dir"
+            python3 tools/promote-submission.py "$dir" --private-key /tmp/XMRegistry.private-key.pem
+          done <<< "${{ steps.pending.outputs.dirs }}"
+          rm -f /tmp/XMRegistry.private-key.pem
+
+      - name: Commit promoted artifacts
+        if: steps.pending.outputs.none != 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "xmregistry-bot"
+          git config user.email "xmregistry-bot@users.noreply.github.com"
+          git add destinations schemas catalog submissions/pending
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "registry: promote pending submission(s) (manual)"
+          git push origin main
