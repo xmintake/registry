@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-31T19:50:16Z",
+  "generatedAt": "2026-08-01T05:11:07Z",
   "publishers": [
     {
-      "publisherSlug": "xmintake",
-      "publisherId": "pub_xmintake",
+      "publisherSlug": "mm",
+      "publisherId": "pub_mm",
       "publisherStatus": "ACTIVE",
-      "name": "XMIntake",
-      "type": "COMMUNITY",
-      "website": "https://www.xmarin.dev",
-      "supportEmail": "support@xmarin.dev",
-      "supportPhone": "+1-765-532-6151",
+      "name": "MM",
+      "type": "INDIVIDUAL",
+      "website": "xmarin. dev",
+      "supportEmail": "marin.markov@gmail.com",
+      "supportPhone": "7655326151",
       "tagline": null
     }
   ]

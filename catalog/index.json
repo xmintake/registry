@@ -1,6 +1,19 @@
 {
-  "generatedAt": "2026-07-31T19:50:16Z",
+  "generatedAt": "2026-08-01T05:11:07Z",
   "destinations": [
+    {
+      "id": "test-1222",
+      "title": "Test 1222",
+      "description": "Test 1222",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/mm/test-1222.destination.json",
+      "publisherSlug": "mm",
+      "publisherName": "MM",
+      "tags": [
+        "test"
+      ],
+      "primaryCategory": "other"
+    },
     {
       "id": "medicine-intake",
       "title": "Medicine Intake",

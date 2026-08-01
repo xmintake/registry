@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T00:22:15Z",
+  "generatedAt": "2026-08-01T05:11:07Z",
   "categories": [
     {
       "id": "getting-started",
@@ -27,6 +27,42 @@
     }
   ],
   "destinations": [
+    {
+      "id": "test-1222",
+      "publisherSlug": "mm",
+      "publisherName": "MM",
+      "title": "Test 1222",
+      "description": "Test 1222",
+      "color": "#F44336",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/mm/test-1222.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/mm/test-1222.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fmm%2Ftest-1222.destination.json",
+      "tags": [
+        "test"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-08-01T05:11:07Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Desc",
+          "kind": "long_text",
+          "required": true
+        },
+        {
+          "name": "Number",
+          "kind": "number",
+          "required": true
+        }
+      ]
+    },
     {
       "id": "medicine-intake",
       "publisherSlug": "xmintake",
@@ -165,6 +201,37 @@
     }
   ],
   "schemas": [
+    {
+      "id": "test-1222",
+      "publisherSlug": "mm",
+      "publisherName": "MM",
+      "title": "Test 1222",
+      "description": "Test 1222",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/mm/test-1222.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fmm%2Ftest-1222.schema.json",
+      "linkedDestinationIds": [
+        "test-1222"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Desc",
+          "kind": "long_text",
+          "required": true
+        },
+        {
+          "name": "Number",
+          "kind": "number",
+          "required": true
+        }
+      ]
+    },
     {
       "id": "medicine-intake",
       "publisherSlug": "xmintake",
