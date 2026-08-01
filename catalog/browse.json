@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T19:50:16Z",
+  "generatedAt": "2026-08-01T00:22:15Z",
   "categories": [
     {
       "id": "getting-started",
@@ -168,8 +168,9 @@
     {
       "id": "medicine-intake",
       "publisherSlug": "xmintake",
-      "title": "Intake Form",
-      "description": "Intake Form",
+      "publisherName": "XMIntake",
+      "title": "Medicine Intake",
+      "description": "Medicine Intake",
       "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/medicine-intake.schema.json",
       "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fmedicine-intake.schema.json",
       "linkedDestinationIds": [
@@ -206,8 +207,9 @@
     {
       "id": "timer-test",
       "publisherSlug": "xmintake",
-      "title": "Intake Form",
-      "description": "Intake Form",
+      "publisherName": "XMIntake",
+      "title": "Timer",
+      "description": "Timer Test",
       "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/timer-test.schema.json",
       "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ftimer-test.schema.json",
       "linkedDestinationIds": [
