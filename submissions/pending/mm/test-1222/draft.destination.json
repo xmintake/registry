@@ -1,0 +1,19 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "test-1222",
+  "source": "https://xmintake.github.io/registry/destinations/mm/test-1222.destination.json",
+  "title": "Test 1222",
+  "description": "Test 1222",
+  "color": "#F44336",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "SHARED",
+  "visibility": "PUBLIC",
+  "spreadsheetId": "12ZMCqBv2rnVWF6AH3WHBQVyovchd9oyz0fcwX0niGgo",
+  "gid": "1714189291",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/mm/test-1222.schema.json",
+  "attachmentPolicy": null,
+  "tags": [
+    "test"
+  ],
+  "primaryCategory": "other"
+}
