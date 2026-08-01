@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "submissionId": "sub_9d73a3b1daa0",
+  "publisherId": "pub_mm",
+  "publisherSlug": "mm",
+  "proposedSource": "https://xmintake.github.io/registry/destinations/mm/test-1222.destination.json",
+  "destinationId": "test-1222",
+  "submitterSub": "116041388261616042906",
+  "submitterEmail": "marin.markov@gmail.com",
+  "sourceDestinationId": "workspace::12ZMCqBv2rnVWF6AH3WHBQVyovchd9oyz0fcwX0niGgo::1714189291",
+  "schemaMode": "inline",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/mm/test-1222.schema.json",
+  "autoChecks": {
+    "passed": [
+      "proposed_source_path_valid",
+      "source_matches_proposed",
+      "schema_url_host",
+      "sheet_mode_supported",
+      "visibility_supported",
+      "primary_category_valid",
+      "tags_valid",
+      "draft_color_valid",
+      "schema_inline_valid",
+      "schema_inline_url_matches",
+      "draft_schema_valid"
+    ],
+    "failed": [],
+    "warnings": []
+  }
+}
