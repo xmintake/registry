@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "DESTINATION",
+  "publisherId": "pub_mm",
+  "publisherSlug": "mm",
+  "destinationId": "test-1222",
+  "proposedSource": "https://xmintake.github.io/registry/destinations/mm/test-1222.destination.json",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/mm/test-1222.schema.json",
+  "reason": "test unpublish",
+  "requestedBySub": "116041388261616042906",
+  "requestedByEmail": "marin.markov@gmail.com",
+  "requestedAt": "2026-08-01T21:12:32Z"
+}
