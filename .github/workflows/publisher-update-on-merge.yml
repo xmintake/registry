@@ -1,0 +1,35 @@
+name: Publisher update catalog on merge
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - "publishers/**"
+
+permissions:
+  contents: write
+
+jobs:
+  catalog:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Regenerate catalog
+        run: python3 tools/generate-catalog.py
+
+      - name: Commit catalog
+        run: |
+          set -euo pipefail
+          git config user.name "xmregistry-bot"
+          git config user.email "xmregistry-bot@users.noreply.github.com"
+          git add catalog
+          if git diff --cached --quiet; then
+            echo "Catalog unchanged."
+            exit 0
+          fi
+          git commit -m "registry: refresh catalog after publisher update (PR #${{ github.event.pull_request.number }})"
+          git push origin main

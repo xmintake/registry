@@ -1,0 +1,71 @@
+name: Deletion PR checks
+
+on:
+  pull_request:
+    paths:
+      - "deletions/pending/**"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Find changed pending deletions
+        id: pending
+        run: |
+          set -euo pipefail
+          mapfile -t dirs < <(git diff --name-only "${{ github.event.pull_request.base.sha }}" "${{ github.sha }}" \
+            | grep '^deletions/pending/' \
+            | awk -F/ '
+                $3=="_publisher" && NF>=4 {print $1"/"$2"/"$3"/"$4; next}
+                NF>=4 {print $1"/"$2"/"$3"/"$4}
+              ' \
+            | sort -u)
+          if [ "${#dirs[@]}" -eq 0 ]; then
+            echo "none=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          {
+            echo "dirs<<EOF"
+            printf '%s\n' "${dirs[@]}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Validate pending deletions
+        if: steps.pending.outputs.none != 'true'
+        run: |
+          set -euo pipefail
+          failed=0
+          while IFS= read -r dir; do
+            [ -z "$dir" ] && continue
+            echo "Validating $dir"
+            if ! python3 tools/validate-deletion.py "$dir"; then
+              failed=1
+            fi
+          done <<< "${{ steps.pending.outputs.dirs }}"
+          exit "$failed"
+
+      - name: Comment PR checklist
+        if: steps.pending.outputs.none != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = [
+              "## XMRegistry deletion checks",
+              "",
+              "- Validation script passed for changed deletion folders.",
+              "- Reviewer: confirm the publisher requested this removal.",
+              "",
+              "Merging runs **Deletion apply on merge** to remove artifacts / publisher profile.",
+            ].join("\n");
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });

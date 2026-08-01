@@ -1,0 +1,91 @@
+name: Deletion apply on merge
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  apply:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Detect deletion paths from merge commit
+        id: pending
+        run: |
+          set -euo pipefail
+          merge_sha="${{ github.event.pull_request.merge_commit_sha }}"
+          mapfile -t dirs < <(git diff --name-only "${{ github.event.pull_request.base.sha }}" "$merge_sha" \
+            | grep '^deletions/pending/' \
+            | awk -F/ '
+                $3=="_publisher" && NF>=4 {print $1"/"$2"/"$3"/"$4; next}
+                NF>=4 {print $1"/"$2"/"$3"/"$4}
+              ' \
+            | sort -u)
+          if [ "${#dirs[@]}" -eq 0 ]; then
+            echo "none=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          {
+            echo "dirs<<EOF"
+            printf '%s\n' "${dirs[@]}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Apply deletions
+        if: steps.pending.outputs.none != 'true'
+        run: |
+          set -euo pipefail
+          while IFS= read -r dir; do
+            [ -z "$dir" ] && continue
+            echo "Applying $dir"
+            if [[ "$dir" == deletions/pending/_publisher/* ]]; then
+              python3 tools/delete-publisher.py "$dir"
+            else
+              python3 tools/delete-artifact.py "$dir"
+            fi
+          done <<< "${{ steps.pending.outputs.dirs }}"
+
+      - name: Close related open PRs for deleted publishers
+        if: steps.pending.outputs.none != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          while IFS= read -r dir; do
+            [ -z "$dir" ] && continue
+            case "$dir" in
+              deletions/pending/_publisher/*)
+                slug="${dir##*/}"
+                echo "Closing open PRs for publisher $slug"
+                gh pr list --state open --json number,headRefName --jq \
+                  ".[] | select(.headRefName|test(\"^(submit|delete|update-profile|update-team)/${slug}(/|$)\")) | .number" \
+                  | while read -r number; do
+                      [ -z "$number" ] && continue
+                      gh pr close "$number" --comment "Closed because publisher \`${slug}\` was deleted."
+                    done
+                ;;
+            esac
+          done <<< "${{ steps.pending.outputs.dirs }}"
+
+      - name: Commit deletion results
+        if: steps.pending.outputs.none != 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "xmregistry-bot"
+          git config user.email "xmregistry-bot@users.noreply.github.com"
+          git add destinations schemas catalog publishers submissions/pending deletions/pending
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "registry: apply deletion(s) from PR #${{ github.event.pull_request.number }}"
+          git push origin main
