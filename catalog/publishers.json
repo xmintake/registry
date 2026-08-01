@@ -1,16 +1,4 @@
 {
-  "generatedAt": "2026-08-01T21:14:04Z",
-  "publishers": [
-    {
-      "publisherSlug": "mm",
-      "publisherId": "pub_mm",
-      "publisherStatus": "ACTIVE",
-      "name": "MM",
-      "type": "INDIVIDUAL",
-      "website": "xmarin. dev",
-      "supportEmail": "marin.markov@gmail.com",
-      "supportPhone": "7655326151",
-      "tagline": null
-    }
-  ]
+  "generatedAt": "2026-08-01T21:16:31Z",
+  "publishers": []
 }
