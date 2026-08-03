@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T02:00:05Z",
+  "generatedAt": "2026-08-03T02:03:11Z",
   "categories": [
     {
       "id": "getting-started",
@@ -169,8 +169,8 @@
       "id": "inventory-list",
       "publisherSlug": "xmintake",
       "publisherName": "",
-      "title": "Item List",
-      "description": "Item list with UPC lookup",
+      "title": "Inventory List",
+      "description": "Inventory list with UPC lookup",
       "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/inventory-list.schema.json",
       "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Finventory-list.schema.json",
       "linkedDestinationIds": [],
