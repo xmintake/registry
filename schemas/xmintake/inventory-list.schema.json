@@ -1,0 +1,64 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.item-list",
+  "schemaVersion": "0.1",
+  "description": "Item list with UPC lookup",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "UPC": {
+      "type": "string",
+      "label": "UPC",
+      "nullable": false,
+      "uiVariant": "barcode",
+      "actions": [
+        {
+          "actionId": "lookupUpc",
+          "name": "Lookup UPC",
+          "description": "Resolve title and description from UPC.",
+          "endpointUrl": "https://script.google.com/macros/s/AKfycbwmwLPvPa1jVNMVT-JS-OXjekqwlTLc-M-yQPGxnxAKrQqa7NsbwkMPk2PLUgbvpIc/exec",
+          "apiAuth": "GOOGLE_ID_TOKEN",
+          "allowedTriggers": ["manual", "on_scan"],
+          "requestMapping": {
+            "UPC": "upc"
+          },
+          "responseMapping": {
+            "title": "Title",
+            "description": "Description"
+          },
+          "fillPolicy": "fill_empty"
+        }
+      ]
+    },
+    "Title": {
+      "type": "string",
+      "label": "Title",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Description": {
+      "type": "string",
+      "label": "Description",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Location": {
+      "type": "string",
+      "label": "Location",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    }
+  },
+  "sharePayloadMapping": {
+    "sharedText": "Notes"
+  }
+}

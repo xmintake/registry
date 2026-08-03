@@ -1,0 +1,547 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "title": "XMIntake Schema v1",
+  "description": "JSON schema defining how XMIntake data schemas are structured, validated, and rendered into UI forms.",
+  "type": "object",
+  "required": [
+    "schemaId",
+    "schemaVersion",
+    "fields"
+  ],
+  "additionalProperties": false,
+  "patternProperties": {
+    "^x-": {}
+  },
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "JSON Schema meta-schema reference used by editors for validation and autocomplete."
+    },
+    "schemaId": {
+      "type": "string",
+      "description": "Stable identifier for the schema (package-style, no version).",
+      "pattern": "^[a-z0-9._-]+$"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "description": "Schema version (semantic versioning).",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when this schema was generated or last updated."
+    },
+    "source": {
+      "type": "string",
+      "format": "uri",
+      "description": "Source of the schema, if any."
+    },
+    "fields": {
+      "type": "object",
+      "description": "Flat map of fields. Keys MUST match column headers.",
+      "additionalProperties": {
+        "$ref": "#/definitions/field"
+      }
+    },
+    "section": {
+      "$ref": "#/definitions/sectionConfig"
+    },
+    "tagParsing": {
+      "$ref": "#/definitions/tagParsing"
+    },
+    "sharePayloadMapping": {
+      "type": "object",
+      "description": "Maps share intent payload keys to schema field ids. E.g. sharedText -> field that receives the shared text (or leading prose when the share ends with a URL). When shared text is a link or ends with a trailing http(s) URL, sharedUrl -> field that receives the raw URL string.",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "properties": {
+        "sharedText": {
+          "type": "string",
+          "description": "Field id that receives EXTRA_TEXT from share intent."
+        },
+        "sharedUrl": {
+          "type": "string",
+          "description": "When shared text is a link (http/https), or ends with prose plus a trailing http(s) URL, field id that receives the raw URL as a string."
+        }
+      }
+    },
+    "shareTextMakeLink": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, for shared links resolve page title and store as HYPERLINK(url, title) in the sharedText field."
+    }
+  },
+  "definitions": {
+    "field": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x-": {}
+      },
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "string",
+            "boolean",
+            "number",
+            "enum",
+            "date",
+            "attachment",
+            "location"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "description": "Optional UI label override."
+        },
+        "description": {
+          "type": "string"
+        },
+        "nullable": {
+          "type": "boolean",
+          "default": false
+        },
+        "hidden": {
+          "type": "boolean",
+          "default": false,
+          "description": "When true, field is hidden from the form."
+        },
+        "default": {
+          "description": "Default value used to prefill the UI."
+        },
+        "ui": {
+          "$ref": "#/definitions/uiHints"
+        },
+        "enum": {
+          "$ref": "#/definitions/enumConfig"
+        },
+        "attachment": {
+          "$ref": "#/definitions/attachmentConfig"
+        },
+        "location": {
+          "$ref": "#/definitions/locationConfig"
+        },
+        "uiVariant": {
+          "type": "string",
+          "enum": [
+            "single_line",
+            "multi_line",
+            "url",
+            "qr_code",
+            "barcode",
+            "nfc_tag",
+            "identifier_code",
+            "file",
+            "photo",
+            "video",
+            "document_scan"
+          ]
+        },
+        "actions": {
+          "type": "array",
+          "description": "Schema-declared Field Actions (HTTPS enrichment). See field-actions proposal.",
+          "items": {
+            "type": "object",
+            "required": [
+              "actionId",
+              "name",
+              "endpointUrl",
+              "responseMapping"
+            ],
+            "additionalProperties": true,
+            "anyOf": [
+              {
+                "required": [
+                  "requestFields"
+                ]
+              },
+              {
+                "required": [
+                  "requestMapping"
+                ]
+              }
+            ],
+            "properties": {
+              "actionId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string"
+              },
+              "endpointUrl": {
+                "type": "string",
+                "pattern": "^https://"
+              },
+              "apiAuth": {
+                "type": "string",
+                "enum": [
+                  "NONE",
+                  "API_KEY",
+                  "GOOGLE_ID_TOKEN"
+                ]
+              },
+              "allowedTriggers": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "manual",
+                    "on_scan"
+                  ]
+                }
+              },
+              "requestFields": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": "Form field refs (field id or unique label) whose values are sent. Optional when requestMapping is set (keys become the request fields)."
+              },
+              "requestMapping": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": "Form field ref (id or unique label) → JSON key in the request fields object. Prefer labels when they are unique."
+              },
+              "responseMapping": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "description": "Response JSON key → form field ref (id or unique label). Prefer labels when they are unique."
+              },
+              "fillPolicy": {
+                "type": "string",
+                "enum": [
+                  "fill_empty",
+                  "overwrite",
+                  "confirm"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "enum"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "enum"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "string"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "uiVariant": {
+                "enum": [
+                  "single_line",
+                  "multi_line",
+                  "url",
+                  "qr_code",
+                  "barcode",
+                  "nfc_tag",
+                  "identifier_code"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "allOf": [
+              {
+                "properties": {
+                  "type": {
+                    "not": {
+                      "const": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "type": {
+                    "not": {
+                      "const": "attachment"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "then": {
+            "not": {
+              "required": [
+                "uiVariant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "attachment"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "attachment"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "attachment"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "uiVariant"
+            ],
+            "properties": {
+              "uiVariant": {
+                "type": "string",
+                "enum": [
+                  "file",
+                  "photo",
+                  "video",
+                  "document_scan"
+                ]
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "nullable": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "uiHints": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x-": {}
+      },
+      "properties": {
+        "control": {
+          "type": "string",
+          "enum": [
+            "text",
+            "textarea",
+            "switch",
+            "number",
+            "dropdown",
+            "checkboxes",
+            "date"
+          ]
+        },
+        "collapsible": {
+          "type": "boolean",
+          "default": false
+        },
+        "incrementStep": {
+          "type": "number",
+          "description": "Used for number fields with increment/decrement UI."
+        }
+      }
+    },
+    "enumConfig": {
+      "type": "object",
+      "required": [
+        "values"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x-": {}
+      },
+      "properties": {
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "multi": {
+          "type": "boolean",
+          "default": false
+        },
+        "acceptNewValues": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "attachmentConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x-": {}
+      },
+      "properties": {
+        "maxFiles": {
+          "type": "number"
+        },
+        "allowedMimeTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "storeInDrive": {
+          "type": "boolean",
+          "default": true
+        },
+        "outputFormat": {
+          "type": "string",
+          "enum": [
+            "name+url"
+          ],
+          "default": "name+url"
+        },
+        "destinationFolderId": {
+          "type": "string",
+          "description": "When stored in Google Drive this is the folder ID where attachments will be stored for this destination."
+        },
+        "multi": {
+          "type": "boolean",
+          "default": false,
+          "description": "When true, the field accepts multiple files in one column (list of attachments)."
+        }
+      }
+    },
+    "locationConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x-": {}
+      },
+      "properties": {
+        "exportFormat": {
+          "type": "string",
+          "enum": [
+            "URL",
+            "LINK",
+            "JSON"
+          ],
+          "default": "URL",
+          "description": "How to export the location: URL, HYPERLINK, or JSON."
+        },
+        "defaultLabelTemplate": {
+          "type": "string",
+          "description": "Optional label template using {lat}, {lng}, {source}, {accuracy}."
+        }
+      }
+    },
+    "sectionConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x-": {}
+      },
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "Column header used for section names.",
+          "default": "Section"
+        },
+        "defaultInsertion": {
+          "type": "string",
+          "enum": [
+            "top",
+            "bottom",
+            "beforeFirst"
+          ],
+          "default": "top"
+        }
+      }
+    },
+    "tagParsing": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x-": {}
+      },
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "column": {
+          "type": "string",
+          "description": "Column that contains free-form text tags.",
+          "default": "Section"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "pattern",
+              "target"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "description": "Regex or prefix match (e.g. \\.s, \\.status)."
+              },
+              "target": {
+                "type": "string",
+                "description": "Target field name or action."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
