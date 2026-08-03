@@ -1,8 +1,8 @@
 {
   "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
-  "schemaId": "xmintake.item-list",
+  "schemaId": "xmintake.inventory-list",
   "schemaVersion": "0.1",
-  "description": "Item list with UPC lookup",
+  "description": "Inventory list with UPC lookup",
   "fields": {
     "Date": {
       "type": "date",
