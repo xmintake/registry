@@ -30,12 +30,11 @@ jobs:
           if [ -f index.html ]; then
             cp index.html site/
             cp -R assets site/ 2>/dev/null || true
+            # Always mirror index as 404 for SPA client routes (/register, /destinations/…)
+            cp site/index.html site/404.html
           fi
           if [ -f CNAME ]; then
             cp CNAME site/
-          fi
-          if [ -f site/index.html ] && [ ! -f site/404.html ]; then
-            cp site/index.html site/404.html
           fi
 
       - name: Upload Pages artifact
