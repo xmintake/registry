@@ -88,13 +88,18 @@ def validate_pending_dir(pending_dir: Path, *, repo_root: Path) -> list[str]:
         errors.append("submission.meta proposedSource must match draft.source")
 
     schema_path = pending_dir / "schema.json"
+    sheet_mode = str(draft.get("sheetMode") or "SHARED").strip().upper()
+    if sheet_mode not in ("SHARED", "TEMPLATE"):
+        errors.append("sheetMode must be SHARED or TEMPLATE")
+
     if schema_path.is_file():
         schema = _load_json(schema_path)
-        if schema_has_attachments(schema) and not draft.get("attachmentPolicy"):
-            errors.append("attachmentPolicy required when schema has attachment fields")
-
-    if draft.get("sheetMode") != "SHARED":
-        errors.append("v1 supports sheetMode SHARED only")
+        # SHARED destinations with attachments need a shared Drive folder.
+        # TEMPLATE installs provision per-user storage, so attachmentPolicy must be omitted.
+        if sheet_mode == "SHARED" and schema_has_attachments(schema) and not draft.get("attachmentPolicy"):
+            errors.append("attachmentPolicy required when sheetMode is SHARED and schema has attachment fields")
+        if sheet_mode == "TEMPLATE" and draft.get("attachmentPolicy") is not None:
+            errors.append("attachmentPolicy must be omitted when sheetMode is TEMPLATE")
 
     visibility = draft.get("visibility") or "PUBLIC"
     if visibility not in ("PUBLIC", "UNLISTED"):
