@@ -7,8 +7,6 @@
   "color": "#009688",
   "destinationType": "GOOGLE_SHEET",
   "sheetMode": "TEMPLATE",
-  "spreadsheetId": "REPLACE_WITH_TEMPLATE_SHEET_ID",
-  "gid": "0",
   "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/word-definitions.schema.json",
   "visibility": "UNLISTED",
   "attachmentPolicy": null,
