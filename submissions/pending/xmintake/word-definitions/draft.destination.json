@@ -1,0 +1,16 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "word-definitions",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/word-definitions.destination.json",
+  "title": "Word Definitions",
+  "description": "Track word definitions with automatic lookup powered by a free dictionary API",
+  "color": "#009688",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "spreadsheetId": "REPLACE_WITH_TEMPLATE_SHEET_ID",
+  "gid": "0",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/word-definitions.schema.json",
+  "visibility": "UNLISTED",
+  "attachmentPolicy": null,
+  "primaryCategory": "education"
+}

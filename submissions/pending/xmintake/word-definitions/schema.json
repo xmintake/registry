@@ -1,0 +1,52 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.word-definitions",
+  "schemaVersion": "0.1",
+  "description": "Word Definitions",
+  "fields": {
+    "Word": {
+      "type": "string",
+      "label": "Word",
+      "nullable": false,
+      "uiVariant": "single_line",
+      "actions": [
+        {
+          "actionId": "defineWord",
+          "name": "Define Word",
+          "description": "Look up a word definition automatically.",
+          "endpointUrl": "https://script.google.com/macros/s/AKfycbyvoQsOKNZy4T2JokynagD9ZxTn3rk-7xzmFfdQl9EtOulSKiyg0LesG52A5Ke1as8/exec",
+          "apiAuth": "GOOGLE_ID_TOKEN",
+          "allowedTriggers": ["manual"],
+          "requestMapping": {
+            "Word": "word"
+          },
+          "responseMapping": {
+            "definition": "Definition"
+          },
+          "fillPolicy": "fill_empty"
+        }
+      ]
+    },
+    "Definition": {
+      "type": "string",
+      "label": "Definition",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Custom Definition": {
+      "type": "string",
+      "label": "Custom Definition",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  },
+  "sharePayloadMapping": {
+    "sharedText": "Notes"
+  }
+}
