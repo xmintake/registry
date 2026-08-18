@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T02:03:11Z",
+  "generatedAt": "2026-08-18T09:04:00Z",
   "categories": [
     {
       "id": "getting-started",
@@ -320,6 +320,40 @@
         {
           "name": "Time",
           "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "word-definitions",
+      "publisherSlug": "xmintake",
+      "publisherName": "",
+      "title": "Word Definitions",
+      "description": "Word Definitions",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/word-definitions.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fword-definitions.schema.json",
+      "linkedDestinationIds": [],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Word",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Definition",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Custom Definition",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
           "required": false
         }
       ]

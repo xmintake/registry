@@ -1,0 +1,15 @@
+{
+  "publisherId": "pub_xmintake",
+  "publisherSlug": "xmintake",
+  "publisher": {
+    "name": "XMIntake",
+    "type": "COMMUNITY",
+    "website": "https://www.xmarin.dev",
+    "supportEmail": "support@xmarin.dev",
+    "supportPhone": "+1-765-532-6151"
+  },
+  "allowedIdentities": [
+    "marin.markov@gmail.com"
+  ],
+  "defaultQuotaPolicy": "SPONSORED"
+}

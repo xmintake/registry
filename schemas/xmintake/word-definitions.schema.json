@@ -16,7 +16,9 @@
           "description": "Look up a word definition automatically.",
           "endpointUrl": "https://script.google.com/macros/s/AKfycbyvoQsOKNZy4T2JokynagD9ZxTn3rk-7xzmFfdQl9EtOulSKiyg0LesG52A5Ke1as8/exec",
           "apiAuth": "GOOGLE_ID_TOKEN",
-          "allowedTriggers": ["manual"],
+          "allowedTriggers": [
+            "manual"
+          ],
           "requestMapping": {
             "Word": "word"
           },

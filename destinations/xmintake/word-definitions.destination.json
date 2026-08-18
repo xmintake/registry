@@ -1,0 +1,32 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "word-definitions",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/word-definitions.destination.json",
+  "title": "Word Definitions",
+  "description": "Track word definitions with automatic lookup powered by a free dictionary API",
+  "color": "#009688",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/word-definitions.schema.json",
+  "visibility": "UNLISTED",
+  "attachmentPolicy": null,
+  "primaryCategory": "education",
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-08-18T09:04:00Z",
+  "issuedAt": "2026-08-18T09:04:00Z",
+  "expiresAt": "2027-08-18T09:04:00Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-08-18T09:04:00Z",
+    "issuedAt": "2026-08-18T09:04:00Z",
+    "expiresAt": "2027-08-18T09:04:00Z",
+    "signature": "Mztx19mQbI1LstrGmIB/ZfZbfvzKIqsU+il9fDegHBpN2xc6bzfgb76K8i4ogUnXtz5T0esYdiUw4KgwAugBCg=="
+  }
+}
