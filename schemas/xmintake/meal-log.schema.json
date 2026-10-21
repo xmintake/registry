@@ -1,0 +1,64 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.meal-log",
+  "schemaVersion": "1.0",
+  "title": "Meal",
+  "description": "A meal: what kind, the place, a photo, and what it cost.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Meal": {
+      "type": "enum",
+      "label": "Meal",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Breakfast",
+          "Lunch",
+          "Dinner",
+          "Snack"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Place": {
+      "type": "string",
+      "label": "Place",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Cost": {
+      "type": "number",
+      "label": "Cost",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

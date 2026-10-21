@@ -1,0 +1,31 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.stall-book-slip",
+  "schemaVersion": "1.0",
+  "title": "Slip",
+  "description": "A sale: scan the item code and note the quantity.",
+  "fields": {
+    "Item code": {
+      "type": "string",
+      "label": "Item code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Quantity": {
+      "type": "number",
+      "label": "Quantity",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    }
+  }
+}

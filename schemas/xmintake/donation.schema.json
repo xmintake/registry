@@ -1,0 +1,62 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.donation",
+  "schemaVersion": "1.0",
+  "title": "Donation",
+  "description": "A gift received: donor code, campaign, amount, and the receipt.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Donor code": {
+      "type": "string",
+      "label": "Donor code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Campaign": {
+      "type": "string",
+      "label": "Campaign",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Amount": {
+      "type": "number",
+      "label": "Amount",
+      "nullable": true
+    },
+    "Method": {
+      "type": "enum",
+      "label": "Method",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Cash",
+          "Card",
+          "Transfer",
+          "Other"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Receipt": {
+      "type": "attachment",
+      "label": "Receipt",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

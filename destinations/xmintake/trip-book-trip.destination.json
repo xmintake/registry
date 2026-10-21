@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "trip-book-trip",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-trip.destination.json",
+  "title": "Trip",
+  "description": "The trip itself: where it starts, who is along, and the day it opened.",
+  "color": "#00897B",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/trip-book-trip.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "other",
+  "tags": [
+    "trip",
+    "travel"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:15:32Z",
+  "issuedAt": "2026-10-21T03:15:32Z",
+  "expiresAt": "2027-10-21T03:15:32Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:15:32Z",
+    "issuedAt": "2026-10-21T03:15:32Z",
+    "expiresAt": "2027-10-21T03:15:32Z",
+    "signature": "lg2jxO3Jjv68vC56iJWXrnCqpZnjoqDntY4QMVUAl/zTKCCZnJ/yp2hGA+G5xNkWK1AWEMGbjPru2SIjLUWRDw=="
+  }
+}

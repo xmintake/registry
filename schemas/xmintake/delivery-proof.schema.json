@@ -1,0 +1,69 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.delivery-proof",
+  "schemaVersion": "1.0",
+  "title": "Delivery proof",
+  "description": "Proof a delivery was made: tracking code, recipient code, photo, and pin.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Tracking code": {
+      "type": "string",
+      "label": "Tracking code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Recipient code": {
+      "type": "string",
+      "label": "Recipient code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Pieces": {
+      "type": "number",
+      "label": "Pieces",
+      "nullable": true
+    },
+    "Condition": {
+      "type": "enum",
+      "label": "Condition",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Intact",
+          "Damaged",
+          "Partial"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

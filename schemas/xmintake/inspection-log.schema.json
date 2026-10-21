@@ -1,0 +1,69 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.inspection-log",
+  "schemaVersion": "1.0",
+  "title": "Inspection",
+  "description": "A check of a tagged item: pass or fail, the finding, a photo, and the pin.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Item tag": {
+      "type": "string",
+      "label": "Item tag",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Checklist": {
+      "type": "string",
+      "label": "Checklist",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Result": {
+      "type": "enum",
+      "label": "Result",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Pass",
+          "Fail"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Finding": {
+      "type": "string",
+      "label": "Finding",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

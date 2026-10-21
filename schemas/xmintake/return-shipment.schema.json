@@ -1,0 +1,60 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.return-shipment",
+  "schemaVersion": "1.0",
+  "title": "Return shipment",
+  "description": "Something you sent back: the return code, the reason, and a photo.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Return code": {
+      "type": "string",
+      "label": "Return code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Merchant": {
+      "type": "string",
+      "label": "Merchant",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Carrier": {
+      "type": "string",
+      "label": "Carrier",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Reason": {
+      "type": "string",
+      "label": "Reason",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Refund expected": {
+      "type": "number",
+      "label": "Refund expected",
+      "nullable": true
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

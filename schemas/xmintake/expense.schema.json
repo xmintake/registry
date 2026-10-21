@@ -1,0 +1,93 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.expense",
+  "schemaVersion": "1.0",
+  "title": "Expense",
+  "description": "A cost you paid: who received it, what it was for, and the receipt.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Vendor": {
+      "type": "string",
+      "label": "Vendor",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Category": {
+      "type": "enum",
+      "label": "Category",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Travel",
+          "Meals",
+          "Supplies",
+          "Utilities",
+          "Other"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Description": {
+      "type": "string",
+      "label": "Description",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Amount": {
+      "type": "number",
+      "label": "Amount",
+      "nullable": true
+    },
+    "Tax": {
+      "type": "number",
+      "label": "Tax",
+      "nullable": true
+    },
+    "Payment method": {
+      "type": "enum",
+      "label": "Payment method",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Cash",
+          "Card",
+          "Transfer",
+          "Other"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Project": {
+      "type": "string",
+      "label": "Project",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Reimbursable": {
+      "type": "boolean",
+      "label": "Reimbursable",
+      "nullable": true
+    },
+    "Receipt": {
+      "type": "attachment",
+      "label": "Receipt",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

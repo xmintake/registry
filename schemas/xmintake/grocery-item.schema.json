@@ -1,0 +1,68 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.grocery-item",
+  "schemaVersion": "1.0",
+  "title": "Grocery item",
+  "description": "Something bought at a store: scan the barcode, note the price, and pin the store.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Barcode": {
+      "type": "string",
+      "label": "Barcode",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Name": {
+      "type": "string",
+      "label": "Name",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Brand": {
+      "type": "string",
+      "label": "Brand",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Quantity": {
+      "type": "number",
+      "label": "Quantity",
+      "nullable": true
+    },
+    "Unit": {
+      "type": "string",
+      "label": "Unit",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Price": {
+      "type": "number",
+      "label": "Price",
+      "nullable": true
+    },
+    "Store": {
+      "type": "string",
+      "label": "Store",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Store location": {
+      "type": "location",
+      "label": "Store location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

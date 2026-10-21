@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "client-invoice",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/client-invoice.destination.json",
+  "title": "Client invoice",
+  "description": "An invoice you sent: its code, the customer, the amount, and a scan.",
+  "color": "#1565C0",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/client-invoice.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "other",
+  "tags": [
+    "invoice",
+    "client"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:51:21Z",
+  "issuedAt": "2026-10-21T03:51:21Z",
+  "expiresAt": "2027-10-21T03:51:21Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:51:21Z",
+    "issuedAt": "2026-10-21T03:51:21Z",
+    "expiresAt": "2027-10-21T03:51:21Z",
+    "signature": "uKfm4LreLtBM1PdU4KrTnO3xatSMCGB9p9MhemdACNGoiRxjggyE5gE3hOav0sswizkSisSV6pYD0FtFBPTVDQ=="
+  }
+}

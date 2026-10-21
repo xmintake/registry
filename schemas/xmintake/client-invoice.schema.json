@@ -1,0 +1,77 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.client-invoice",
+  "schemaVersion": "1.0",
+  "title": "Client invoice",
+  "description": "An invoice you sent: its code, the customer, the amount, and a scan.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Invoice code": {
+      "type": "string",
+      "label": "Invoice code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Customer": {
+      "type": "string",
+      "label": "Customer",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Description": {
+      "type": "string",
+      "label": "Description",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Amount": {
+      "type": "number",
+      "label": "Amount",
+      "nullable": true
+    },
+    "Tax": {
+      "type": "number",
+      "label": "Tax",
+      "nullable": true
+    },
+    "Due": {
+      "type": "date",
+      "label": "Due",
+      "nullable": true
+    },
+    "Status": {
+      "type": "enum",
+      "label": "Status",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Draft",
+          "Sent",
+          "Paid"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Scan": {
+      "type": "attachment",
+      "label": "Scan",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

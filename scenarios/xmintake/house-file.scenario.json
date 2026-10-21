@@ -1,0 +1,101 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "createdBy": "xmintake",
+  "description": "A home walkthrough. House holds the building and its rooms. Fix holds snags, bills, and clips. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+  "version": "2.0",
+  "permissions": [
+    "navigate",
+    "addDestination"
+  ],
+  "scenario": {
+    "name": "House file",
+    "onError": "ask",
+    "onExists": "skip",
+    "steps": [
+      {
+        "id": "ws-house",
+        "description": "House workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "House"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "house-file-home",
+        "description": "Home",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "House",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-home.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "houseSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "house-file-room",
+        "description": "Room",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "House",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-room.destination.json",
+          "spreadsheetId": "${houseSheet}",
+          "tabName": "Room"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "ws-fix",
+        "description": "Fix workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "Fix"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "house-file-snag",
+        "description": "Snag",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Fix",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-snag.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "fixSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "house-file-bill",
+        "description": "Bill",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Fix",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-bill.destination.json",
+          "spreadsheetId": "${fixSheet}",
+          "tabName": "Bill"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "house-file-clip",
+        "description": "Clip",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Fix",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-clip.destination.json",
+          "spreadsheetId": "${fixSheet}",
+          "tabName": "Clip"
+        },
+        "timeoutMs": 60000
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "slPoLjKMb0GjXHvSXXA/U4fjwMcnwkzmJ15n8rqyPv+zLS7XzyP62uHNCwR74EIzSzpl8YrydmIuJW6FCE3lDw=="
+  }
+}

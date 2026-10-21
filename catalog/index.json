@@ -1,0 +1,736 @@
+{
+  "generatedAt": "2026-10-21T21:39:01Z",
+  "destinations": [
+    {
+      "id": "appointment",
+      "title": "Appointment",
+      "description": "A visit to a provider: the reason, a scan of the card, and the pin.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/appointment.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "appointment"
+      ],
+      "primaryCategory": "health-wellness"
+    },
+    {
+      "id": "asset-record",
+      "title": "Asset",
+      "description": "A tagged thing you keep: its photo, condition, custodian, and where it sits.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/asset-record.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "asset",
+        "tag"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "class-roll",
+      "title": "Class roll",
+      "description": "Attendance for a class, recorded by subject code rather than a full name.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/class-roll.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "class",
+        "attendance"
+      ],
+      "primaryCategory": "education"
+    },
+    {
+      "id": "cleaning-log",
+      "title": "Cleaning",
+      "description": "A cleaning pass: the area, photos before and after, and who did it.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/cleaning-log.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "cleaning"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "client-invoice",
+      "title": "Client invoice",
+      "description": "An invoice you sent: its code, the customer, the amount, and a scan.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/client-invoice.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "invoice",
+        "client"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "delivery-proof",
+      "title": "Delivery proof",
+      "description": "Proof a delivery was made: tracking code, recipient code, photo, and pin.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/delivery-proof.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "delivery",
+        "proof"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "donation",
+      "title": "Donation",
+      "description": "A gift received: donor code, campaign, amount, and the receipt.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/donation.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "donation",
+        "receipt"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "expense",
+      "title": "Expense",
+      "description": "A cost you paid: who received it, what it was for, and the receipt.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/expense.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "expense",
+        "receipt"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "field-lead",
+      "title": "Field lead",
+      "description": "A person or company you met in the field: a scan of the card and the next step.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/field-lead.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "lead"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "fuel-stop",
+      "title": "Fuel stop",
+      "description": "A fill-up: the vehicle, the pump numbers, the station, and the receipt.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/fuel-stop.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "fuel",
+        "vehicle"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "grocery-item",
+      "title": "Grocery item",
+      "description": "Something bought at a store: scan the barcode, note the price, and pin the store.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/grocery-item.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "grocery",
+        "barcode"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "house-file-bill",
+      "title": "Bill",
+      "description": "A vendor bill or receipt, scanned.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-bill.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "house",
+        "receipt"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "house-file-clip",
+      "title": "Clip",
+      "description": "A short video of something a photo does not show, such as a drip.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-clip.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "house",
+        "video"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "house-file-home",
+      "title": "Home",
+      "description": "The building: address, pin, and a photo of the front.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-home.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "house"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "house-file-room",
+      "title": "Room",
+      "description": "A room, with a door tag, a photo, and its condition.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-room.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "house",
+        "room"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "house-file-snag",
+      "title": "Snag",
+      "description": "A problem in the house: photo, pin, and priority.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-snag.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "house",
+        "snag"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "incident-log",
+      "title": "Incident",
+      "description": "Something that went wrong: what happened, how serious, a photo, and the pin.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/incident-log.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "incident"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "inspection-log",
+      "title": "Inspection",
+      "description": "A check of a tagged item: pass or fail, the finding, a photo, and the pin.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/inspection-log.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "inspection"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "job-round-fault",
+      "title": "Fault",
+      "description": "A fault on tagged equipment: pin, photo, and a video of the problem.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-fault.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "job",
+        "equipment"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "job-round-job",
+      "title": "Job",
+      "description": "A call: the job code, the customer, and the arrival pin.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-job.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "job",
+        "site"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "job-round-order",
+      "title": "Order",
+      "description": "The work order, scanned, with its code.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-order.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "job",
+        "paper"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "job-round-part",
+      "title": "Part",
+      "description": "A part used on the job, identified by its code.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-part.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "job",
+        "part"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "meal-log",
+      "title": "Meal",
+      "description": "A meal: what kind, the place, a photo, and what it cost.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/meal-log.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "meal"
+      ],
+      "primaryCategory": "health-wellness"
+    },
+    {
+      "id": "meeting-note",
+      "title": "Meeting",
+      "description": "A meeting in the field: who was there, a photo of the board, and the next step.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/meeting-note.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "meeting"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "mileage",
+      "title": "Mileage",
+      "description": "A drive: why you went, where it started and ended, and the miles.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/mileage.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "mileage",
+        "travel"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "package-log",
+      "title": "Package",
+      "description": "A parcel that arrived: tracking code, condition, photo, and where it was.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/package-log.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "package",
+        "delivery"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "payment-in",
+      "title": "Payment in",
+      "description": "Money that came in, with the reference and the invoice it pays.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/payment-in.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "payment"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "purchase-order",
+      "title": "Purchase order",
+      "description": "An order you placed: the PO code, the vendor, quantities, and a scan.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/purchase-order.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "purchase",
+        "order"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "refund",
+      "title": "Refund",
+      "description": "Money returned to you, with the original reference and the receipt.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/refund.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "refund",
+        "receipt"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "return-shipment",
+      "title": "Return shipment",
+      "description": "Something you sent back: the return code, the reason, and a photo.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/return-shipment.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "return",
+        "shipment"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "service-record",
+      "title": "Service record",
+      "description": "Work done on something you own: the tag, the vendor, the cost, and the paperwork.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/service-record.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "service",
+        "maintenance"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "shift-note",
+      "title": "Shift note",
+      "description": "The handoff at the end of a shift: the code, a photo, and what the next person should know.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/shift-note.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "shift",
+        "handoff"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "stall-book-batch",
+      "title": "Batch",
+      "description": "A made batch: lot code, photo, and where it is stored.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-batch.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "stall",
+        "batch"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "stall-book-day",
+      "title": "Day",
+      "description": "A market day: where the stall is, and a photo of it.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-day.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "stall",
+        "market"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "stall-book-invoice",
+      "title": "Invoice",
+      "description": "A supplier invoice, scanned.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-invoice.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "stall",
+        "invoice"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "stall-book-item",
+      "title": "Item",
+      "description": "A good for sale: SKU, photo, and price.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-item.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "stall",
+        "goods"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "stall-book-slip",
+      "title": "Slip",
+      "description": "A sale: scan the item code and note the quantity.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-slip.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "stall",
+        "sale"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "stock-count",
+      "title": "Stock count",
+      "description": "A count of what is in a bin: scan the barcode and record the quantity.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stock-count.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "stock",
+        "count"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "study-walk-clip",
+      "title": "Clip",
+      "description": "A short video from the site, with its pin.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-clip.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "study",
+        "video"
+      ],
+      "primaryCategory": "education"
+    },
+    {
+      "id": "study-walk-ground",
+      "title": "Ground",
+      "description": "A study site: name, pin, and a photo.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-ground.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "study",
+        "site"
+      ],
+      "primaryCategory": "education"
+    },
+    {
+      "id": "study-walk-note",
+      "title": "Note",
+      "description": "A field note tied to a subject code, not a full name.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-note.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "study",
+        "note"
+      ],
+      "primaryCategory": "education"
+    },
+    {
+      "id": "study-walk-sample",
+      "title": "Sample",
+      "description": "A sample: its vial or bag code, where it was found, and a photo.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sample.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "study",
+        "sample"
+      ],
+      "primaryCategory": "education"
+    },
+    {
+      "id": "study-walk-sheet",
+      "title": "Sheet",
+      "description": "A scanned page or map, with its record code.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sheet.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "study",
+        "scan"
+      ],
+      "primaryCategory": "education"
+    },
+    {
+      "id": "temperature-log",
+      "title": "Temperature",
+      "description": "A temperature check: the place, the reading, and a photo of the gauge.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/temperature-log.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "temperature"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "time-entry",
+      "title": "Time entry",
+      "description": "Hours on a job: the job code, the task, and the site.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/time-entry.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "time",
+        "job"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "trip-book-moment",
+      "title": "Moment",
+      "description": "A short video of a moment, with where it was.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-moment.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "trip",
+        "video"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "trip-book-ticket",
+      "title": "Ticket",
+      "description": "A ticket or reservation, with its code and a scan of the paper.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-ticket.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "trip",
+        "ticket"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "trip-book-trip",
+      "title": "Trip",
+      "description": "The trip itself: where it starts, who is along, and the day it opened.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-trip.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "trip",
+        "travel"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "trip-book-visit",
+      "title": "Visit",
+      "description": "A place visited: pin, photo, rating, and whether to come back.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-visit.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "trip",
+        "place"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "visitor-log",
+      "title": "Visitor",
+      "description": "Someone on site: badge code, host, purpose, and a photo of the badge.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/visitor-log.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "visitor",
+        "badge"
+      ],
+      "primaryCategory": "field-work"
+    },
+    {
+      "id": "warranty",
+      "title": "Warranty",
+      "description": "A product you can still claim on: its code, serial, photo, and receipt.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/warranty.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "warranty",
+        "receipt"
+      ],
+      "primaryCategory": "other"
+    },
+    {
+      "id": "work-sample",
+      "title": "Work sample",
+      "description": "A page of work tied to a subject code, with a photo or scan and a score.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/work-sample.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "class",
+        "sample"
+      ],
+      "primaryCategory": "education"
+    },
+    {
+      "id": "workout-log",
+      "title": "Workout",
+      "description": "A session: the activity, how long, a photo, and where you were.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/workout-log.destination.json",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "tags": [
+        "workout"
+      ],
+      "primaryCategory": "health-wellness"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.stock-count",
+  "schemaVersion": "1.0",
+  "title": "Stock count",
+  "description": "A count of what is in a bin: scan the barcode and record the quantity.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Barcode": {
+      "type": "string",
+      "label": "Barcode",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Name": {
+      "type": "string",
+      "label": "Name",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Bin": {
+      "type": "string",
+      "label": "Bin",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Counted": {
+      "type": "number",
+      "label": "Counted",
+      "nullable": true
+    },
+    "Unit": {
+      "type": "string",
+      "label": "Unit",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Counter code": {
+      "type": "string",
+      "label": "Counter code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

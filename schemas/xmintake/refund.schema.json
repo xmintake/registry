@@ -1,0 +1,68 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.refund",
+  "schemaVersion": "1.0",
+  "title": "Refund",
+  "description": "Money returned to you, with the original reference and the receipt.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Merchant": {
+      "type": "string",
+      "label": "Merchant",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Amount": {
+      "type": "number",
+      "label": "Amount",
+      "nullable": true
+    },
+    "Reason": {
+      "type": "string",
+      "label": "Reason",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Original reference": {
+      "type": "string",
+      "label": "Original reference",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Method": {
+      "type": "enum",
+      "label": "Method",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Cash",
+          "Card",
+          "Transfer",
+          "Other"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Receipt": {
+      "type": "attachment",
+      "label": "Receipt",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

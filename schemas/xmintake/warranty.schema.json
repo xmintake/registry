@@ -1,0 +1,76 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.warranty",
+  "schemaVersion": "1.0",
+  "title": "Warranty",
+  "description": "A product you can still claim on: its code, serial, photo, and receipt.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Product code": {
+      "type": "string",
+      "label": "Product code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Product": {
+      "type": "string",
+      "label": "Product",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Serial": {
+      "type": "string",
+      "label": "Serial",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Vendor": {
+      "type": "string",
+      "label": "Vendor",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Price": {
+      "type": "number",
+      "label": "Price",
+      "nullable": true
+    },
+    "Expires": {
+      "type": "date",
+      "label": "Expires",
+      "nullable": true
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Receipt": {
+      "type": "attachment",
+      "label": "Receipt",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

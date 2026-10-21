@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "grocery-item",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/grocery-item.destination.json",
+  "title": "Grocery item",
+  "description": "Something bought at a store: scan the barcode, note the price, and pin the store.",
+  "color": "#00897B",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/grocery-item.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "other",
+  "tags": [
+    "grocery",
+    "barcode"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:51:22Z",
+  "issuedAt": "2026-10-21T03:51:22Z",
+  "expiresAt": "2027-10-21T03:51:22Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:51:22Z",
+    "issuedAt": "2026-10-21T03:51:22Z",
+    "expiresAt": "2027-10-21T03:51:22Z",
+    "signature": "qcm16XuP2vUapfUJMSZ6963Jj8FviRW4ab/2fYUaWnWVny1FrHLylu/v3SAA5OPzIEqmbQX1MKySB9BOGbOMBw=="
+  }
+}

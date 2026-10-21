@@ -1,0 +1,56 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.appointment",
+  "schemaVersion": "1.0",
+  "title": "Appointment",
+  "description": "A visit to a provider: the reason, a scan of the card, and the pin.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Provider": {
+      "type": "string",
+      "label": "Provider",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Reason": {
+      "type": "string",
+      "label": "Reason",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Card": {
+      "type": "attachment",
+      "label": "Card",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Follow-up": {
+      "type": "date",
+      "label": "Follow-up",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

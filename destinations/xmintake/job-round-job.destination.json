@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "job-round-job",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-job.destination.json",
+  "title": "Job",
+  "description": "A call: the job code, the customer, and the arrival pin.",
+  "color": "#1565C0",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-job.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "field-work",
+  "tags": [
+    "job",
+    "site"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:15:29Z",
+  "issuedAt": "2026-10-21T03:15:29Z",
+  "expiresAt": "2027-10-21T03:15:29Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:15:29Z",
+    "issuedAt": "2026-10-21T03:15:29Z",
+    "expiresAt": "2027-10-21T03:15:29Z",
+    "signature": "357Nxp4HlORAFxbw4JxqrkTTnJqJgRsQiZcQgVL0h92K/9GQCNv+f9g6R94Kay65zILWilnCPTE8FXEy6oEgCg=="
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "study-walk-ground",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-ground.destination.json",
+  "title": "Ground",
+  "description": "A study site: name, pin, and a photo.",
+  "color": "#6A1B9A",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-ground.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "education",
+  "tags": [
+    "study",
+    "site"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:15:31Z",
+  "issuedAt": "2026-10-21T03:15:31Z",
+  "expiresAt": "2027-10-21T03:15:31Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:15:31Z",
+    "issuedAt": "2026-10-21T03:15:31Z",
+    "expiresAt": "2027-10-21T03:15:31Z",
+    "signature": "rdVzJMpMD0LrC41kMUJ8sgQYyHKLUyBPBjfzLMhvNMD6GjGi33kUW+u0RHI1EPjr8lDLpAR35FdB3L0LHGgEDA=="
+  }
+}

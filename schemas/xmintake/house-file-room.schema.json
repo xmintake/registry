@@ -1,0 +1,56 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.house-file-room",
+  "schemaVersion": "1.0",
+  "title": "Room",
+  "description": "A room, with a door tag, a photo, and its condition.",
+  "fields": {
+    "Room": {
+      "type": "string",
+      "label": "Room",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Door tag": {
+      "type": "string",
+      "label": "Door tag",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Condition": {
+      "type": "enum",
+      "label": "Condition",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Good",
+          "Fair",
+          "Poor"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    }
+  }
+}

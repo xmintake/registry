@@ -1,0 +1,39 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.stall-book-batch",
+  "schemaVersion": "1.0",
+  "title": "Batch",
+  "description": "A made batch: lot code, photo, and where it is stored.",
+  "fields": {
+    "Lot code": {
+      "type": "string",
+      "label": "Lot code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    }
+  }
+}

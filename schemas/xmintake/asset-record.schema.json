@@ -1,0 +1,90 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.asset-record",
+  "schemaVersion": "1.0",
+  "title": "Asset",
+  "description": "A tagged thing you keep: its photo, condition, custodian, and where it sits.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Tag": {
+      "type": "string",
+      "label": "Tag",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Name": {
+      "type": "string",
+      "label": "Name",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Category": {
+      "type": "enum",
+      "label": "Category",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Equipment",
+          "Vehicle",
+          "Tool",
+          "Other"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Serial": {
+      "type": "string",
+      "label": "Serial",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Condition": {
+      "type": "enum",
+      "label": "Condition",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Good",
+          "Fair",
+          "Poor"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Custodian code": {
+      "type": "string",
+      "label": "Custodian code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

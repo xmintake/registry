@@ -1,0 +1,51 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.trip-book-ticket",
+  "schemaVersion": "1.0",
+  "title": "Ticket",
+  "description": "A ticket or reservation, with its code and a scan of the paper.",
+  "fields": {
+    "Ticket code": {
+      "type": "string",
+      "label": "Ticket code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Kind": {
+      "type": "enum",
+      "label": "Kind",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Train",
+          "Flight",
+          "Stay",
+          "Other"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Ticket": {
+      "type": "attachment",
+      "label": "Ticket",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

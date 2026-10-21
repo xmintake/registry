@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "house-file-bill",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-bill.destination.json",
+  "title": "Bill",
+  "description": "A vendor bill or receipt, scanned.",
+  "color": "#6D4C41",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-bill.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "other",
+  "tags": [
+    "house",
+    "receipt"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:15:29Z",
+  "issuedAt": "2026-10-21T03:15:29Z",
+  "expiresAt": "2027-10-21T03:15:29Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:15:29Z",
+    "issuedAt": "2026-10-21T03:15:29Z",
+    "expiresAt": "2027-10-21T03:15:29Z",
+    "signature": "CSCaeFOuu/8FY0GkpdHZQVwtEXDjx4KNa4m5PMNYfnFaeMcx3TLitLhRCNOLsA03sC2QX6gn4zATvpFjZ4WdBQ=="
+  }
+}

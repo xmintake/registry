@@ -1,0 +1,31 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.job-round-order",
+  "schemaVersion": "1.0",
+  "title": "Order",
+  "description": "The work order, scanned, with its code.",
+  "fields": {
+    "Order code": {
+      "type": "string",
+      "label": "Order code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Order": {
+      "type": "attachment",
+      "label": "Order",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    }
+  }
+}

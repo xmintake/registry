@@ -1,0 +1,101 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "createdBy": "xmintake",
+  "description": "Field notes. Site holds the ground and samples. Record holds notes, scanned pages, and clips. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+  "version": "2.0",
+  "permissions": [
+    "navigate",
+    "addDestination"
+  ],
+  "scenario": {
+    "name": "Study walk",
+    "onError": "ask",
+    "onExists": "skip",
+    "steps": [
+      {
+        "id": "ws-site",
+        "description": "Site workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "Site"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "study-walk-ground",
+        "description": "Ground",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Site",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-ground.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "siteSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "study-walk-sample",
+        "description": "Sample",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Site",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sample.destination.json",
+          "spreadsheetId": "${siteSheet}",
+          "tabName": "Sample"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "ws-record",
+        "description": "Record workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "Record"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "study-walk-note",
+        "description": "Note",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Record",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-note.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "recordSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "study-walk-sheet",
+        "description": "Sheet",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Record",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sheet.destination.json",
+          "spreadsheetId": "${recordSheet}",
+          "tabName": "Sheet"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "study-walk-clip",
+        "description": "Clip",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Record",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-clip.destination.json",
+          "spreadsheetId": "${recordSheet}",
+          "tabName": "Clip"
+        },
+        "timeoutMs": 60000
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "m1GjF2iRY2rY4pUCrWdaQHKMqUGLDtVQQ4Lh2vpoR3Pai5u3diAXC3VyJCoop1k7pYy14XHUkgjyWaV4mfFRAA=="
+  }
+}

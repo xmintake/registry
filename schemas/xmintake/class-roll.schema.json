@@ -1,0 +1,37 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.class-roll",
+  "schemaVersion": "1.0",
+  "title": "Class roll",
+  "description": "Attendance for a class, recorded by subject code rather than a full name.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Class": {
+      "type": "string",
+      "label": "Class",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Subject code": {
+      "type": "string",
+      "label": "Subject code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Present": {
+      "type": "boolean",
+      "label": "Present",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

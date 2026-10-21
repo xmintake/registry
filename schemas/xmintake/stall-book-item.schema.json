@@ -1,0 +1,43 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.stall-book-item",
+  "schemaVersion": "1.0",
+  "title": "Item",
+  "description": "A good for sale: SKU, photo, and price.",
+  "fields": {
+    "SKU": {
+      "type": "string",
+      "label": "SKU",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Name": {
+      "type": "string",
+      "label": "Name",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Price": {
+      "type": "number",
+      "label": "Price",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

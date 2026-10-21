@@ -1,0 +1,81 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.service-record",
+  "schemaVersion": "1.0",
+  "title": "Service record",
+  "description": "Work done on something you own: the tag, the vendor, the cost, and the paperwork.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Asset tag": {
+      "type": "string",
+      "label": "Asset tag",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Asset name": {
+      "type": "string",
+      "label": "Asset name",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Vendor": {
+      "type": "string",
+      "label": "Vendor",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Work done": {
+      "type": "string",
+      "label": "Work done",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Reading": {
+      "type": "number",
+      "label": "Reading",
+      "nullable": true
+    },
+    "Amount": {
+      "type": "number",
+      "label": "Amount",
+      "nullable": true
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Receipt": {
+      "type": "attachment",
+      "label": "Receipt",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Next service": {
+      "type": "date",
+      "label": "Next service",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "study-walk-sample",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sample.destination.json",
+  "title": "Sample",
+  "description": "A sample: its vial or bag code, where it was found, and a photo.",
+  "color": "#6A1B9A",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-sample.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "education",
+  "tags": [
+    "study",
+    "sample"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:15:31Z",
+  "issuedAt": "2026-10-21T03:15:31Z",
+  "expiresAt": "2027-10-21T03:15:31Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:15:31Z",
+    "issuedAt": "2026-10-21T03:15:31Z",
+    "expiresAt": "2027-10-21T03:15:31Z",
+    "signature": "jxvFMIRxwOzm78+PFU1ni3jmq0VcWIx9oi9lQzl43kRZJvgdkZt53EnmAg3Ke34SN1mC3jgrslINdaqNCtfQBQ=="
+  }
+}

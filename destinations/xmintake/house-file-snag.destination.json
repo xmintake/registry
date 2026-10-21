@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "house-file-snag",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-snag.destination.json",
+  "title": "Snag",
+  "description": "A problem in the house: photo, pin, and priority.",
+  "color": "#6D4C41",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-snag.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "other",
+  "tags": [
+    "house",
+    "snag"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:15:29Z",
+  "issuedAt": "2026-10-21T03:15:29Z",
+  "expiresAt": "2027-10-21T03:15:29Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:15:29Z",
+    "issuedAt": "2026-10-21T03:15:29Z",
+    "expiresAt": "2027-10-21T03:15:29Z",
+    "signature": "x6Yz1MM2CKVewsJUevd+aRal+IPq4u0Kdory1FWGqukgrrzoKShFR/tk6iYdHpph9Hb0T0JZLEyabM1taMBzBQ=="
+  }
+}

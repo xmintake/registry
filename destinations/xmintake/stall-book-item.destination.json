@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "stall-book-item",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-item.destination.json",
+  "title": "Item",
+  "description": "A good for sale: SKU, photo, and price.",
+  "color": "#EF6C00",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-item.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "other",
+  "tags": [
+    "stall",
+    "goods"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:15:30Z",
+  "issuedAt": "2026-10-21T03:15:30Z",
+  "expiresAt": "2027-10-21T03:15:30Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:15:30Z",
+    "issuedAt": "2026-10-21T03:15:30Z",
+    "expiresAt": "2027-10-21T03:15:30Z",
+    "signature": "XtSmo0k5aYQdNPDI1E3TWx7LR5MaZwKq9QBcUogX9q8JvA/jI2bVMMlIatjDCWWB/M/aPIVJKHFmhbhpKMQ4Ag=="
+  }
+}

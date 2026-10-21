@@ -1,0 +1,60 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.cleaning-log",
+  "schemaVersion": "1.0",
+  "title": "Cleaning",
+  "description": "A cleaning pass: the area, photos before and after, and who did it.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Area": {
+      "type": "string",
+      "label": "Area",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Task": {
+      "type": "string",
+      "label": "Task",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Before": {
+      "type": "attachment",
+      "label": "Before",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "After": {
+      "type": "attachment",
+      "label": "After",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Done by": {
+      "type": "string",
+      "label": "Done by",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

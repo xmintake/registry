@@ -1,0 +1,39 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.trip-book-moment",
+  "schemaVersion": "1.0",
+  "title": "Moment",
+  "description": "A short video of a moment, with where it was.",
+  "fields": {
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Video": {
+      "type": "attachment",
+      "label": "Video",
+      "nullable": true,
+      "uiVariant": "video",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Caption": {
+      "type": "string",
+      "label": "Caption",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    }
+  }
+}

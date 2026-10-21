@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "warranty",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/warranty.destination.json",
+  "title": "Warranty",
+  "description": "A product you can still claim on: its code, serial, photo, and receipt.",
+  "color": "#00897B",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/warranty.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "other",
+  "tags": [
+    "warranty",
+    "receipt"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:51:25Z",
+  "issuedAt": "2026-10-21T03:51:25Z",
+  "expiresAt": "2027-10-21T03:51:25Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:51:25Z",
+    "issuedAt": "2026-10-21T03:51:25Z",
+    "expiresAt": "2027-10-21T03:51:25Z",
+    "signature": "zHIJi4vshgUVnktBYjtILxwXqXanJtRG4aFLReait9PEW21gfwy4wDP3j6FOPZzBwozpV5AxIG1xqKYWU1KLBg=="
+  }
+}

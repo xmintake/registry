@@ -1,0 +1,69 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.shift-note",
+  "schemaVersion": "1.0",
+  "title": "Shift note",
+  "description": "The handoff at the end of a shift: the code, a photo, and what the next person should know.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Shift code": {
+      "type": "string",
+      "label": "Shift code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Role": {
+      "type": "string",
+      "label": "Role",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Start": {
+      "type": "string",
+      "label": "Start",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "End": {
+      "type": "string",
+      "label": "End",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Site": {
+      "type": "location",
+      "label": "Site",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Handoff": {
+      "type": "string",
+      "label": "Handoff",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

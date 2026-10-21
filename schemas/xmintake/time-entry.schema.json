@@ -1,0 +1,68 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.time-entry",
+  "schemaVersion": "1.0",
+  "title": "Time entry",
+  "description": "Hours on a job: the job code, the task, and the site.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Job code": {
+      "type": "string",
+      "label": "Job code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Client": {
+      "type": "string",
+      "label": "Client",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Task": {
+      "type": "string",
+      "label": "Task",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Start": {
+      "type": "string",
+      "label": "Start",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "End": {
+      "type": "string",
+      "label": "End",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Hours": {
+      "type": "number",
+      "label": "Hours",
+      "nullable": true
+    },
+    "Billable": {
+      "type": "boolean",
+      "label": "Billable",
+      "nullable": true
+    },
+    "Site": {
+      "type": "location",
+      "label": "Site",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

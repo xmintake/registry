@@ -1,0 +1,57 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.payment-in",
+  "schemaVersion": "1.0",
+  "title": "Payment in",
+  "description": "Money that came in, with the reference and the invoice it pays.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Payer": {
+      "type": "string",
+      "label": "Payer",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Amount": {
+      "type": "number",
+      "label": "Amount",
+      "nullable": true
+    },
+    "Method": {
+      "type": "enum",
+      "label": "Method",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Cash",
+          "Card",
+          "Transfer",
+          "Other"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Reference code": {
+      "type": "string",
+      "label": "Reference code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Invoice code": {
+      "type": "string",
+      "label": "Invoice code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

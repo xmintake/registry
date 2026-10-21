@@ -1,0 +1,65 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.temperature-log",
+  "schemaVersion": "1.0",
+  "title": "Temperature",
+  "description": "A temperature check: the place, the reading, and a photo of the gauge.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Place": {
+      "type": "string",
+      "label": "Place",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Equipment": {
+      "type": "string",
+      "label": "Equipment",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Reading": {
+      "type": "number",
+      "label": "Reading",
+      "nullable": true
+    },
+    "Unit": {
+      "type": "enum",
+      "label": "Unit",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "F",
+          "C"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "In range": {
+      "type": "boolean",
+      "label": "In range",
+      "nullable": true
+    },
+    "Gauge": {
+      "type": "attachment",
+      "label": "Gauge",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

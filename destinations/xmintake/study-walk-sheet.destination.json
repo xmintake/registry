@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "study-walk-sheet",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sheet.destination.json",
+  "title": "Sheet",
+  "description": "A scanned page or map, with its record code.",
+  "color": "#6A1B9A",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-sheet.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "education",
+  "tags": [
+    "study",
+    "scan"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:15:31Z",
+  "issuedAt": "2026-10-21T03:15:31Z",
+  "expiresAt": "2027-10-21T03:15:31Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:15:31Z",
+    "issuedAt": "2026-10-21T03:15:31Z",
+    "expiresAt": "2027-10-21T03:15:31Z",
+    "signature": "iq7svNaQk4hM6+b4dhY6fQd+70hcxFfeIwQxxUmBXKt8D8LOjdud5x8QQJgrybKPxmuFUnAtRQPBbDOLoMNZDA=="
+  }
+}

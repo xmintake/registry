@@ -1,0 +1,5954 @@
+{
+  "generatedAt": "2026-10-21T21:39:01Z",
+  "categories": [
+    {
+      "id": "health-wellness",
+      "label": "Health & wellness"
+    },
+    {
+      "id": "field-work",
+      "label": "Field work"
+    },
+    {
+      "id": "education",
+      "label": "Education"
+    },
+    {
+      "id": "other",
+      "label": "Other"
+    }
+  ],
+  "destinations": [
+    {
+      "id": "appointment",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Appointment",
+      "description": "A visit to a provider: the reason, a scan of the card, and the pin.",
+      "color": "#AD1457",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/appointment.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/appointment.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fappointment.destination.json",
+      "tags": [
+        "appointment"
+      ],
+      "primaryCategory": "health-wellness",
+      "issuedAt": "2026-10-21T03:51:21Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Provider",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Reason",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Card",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Follow-up",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "asset-record",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Asset",
+      "description": "A tagged thing you keep: its photo, condition, custodian, and where it sits.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/asset-record.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/asset-record.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fasset-record.destination.json",
+      "tags": [
+        "asset",
+        "tag"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:21Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Tag",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Name",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Category",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Serial",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Condition",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Custodian code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "class-roll",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Class roll",
+      "description": "Attendance for a class, recorded by subject code rather than a full name.",
+      "color": "#2E7D32",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/class-roll.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/class-roll.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fclass-roll.destination.json",
+      "tags": [
+        "class",
+        "attendance"
+      ],
+      "primaryCategory": "education",
+      "issuedAt": "2026-10-21T03:51:21Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Class",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Subject code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Present",
+          "kind": "yes_no",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cleaning-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Cleaning",
+      "description": "A cleaning pass: the area, photos before and after, and who did it.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/cleaning-log.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/cleaning-log.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fcleaning-log.destination.json",
+      "tags": [
+        "cleaning"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:21Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Area",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Task",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Before",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "After",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Done by",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "client-invoice",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Client invoice",
+      "description": "An invoice you sent: its code, the customer, the amount, and a scan.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/client-invoice.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/client-invoice.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fclient-invoice.destination.json",
+      "tags": [
+        "invoice",
+        "client"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:21Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Invoice code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Customer",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Description",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Tax",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Due",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Status",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Scan",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "delivery-proof",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Delivery proof",
+      "description": "Proof a delivery was made: tracking code, recipient code, photo, and pin.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/delivery-proof.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/delivery-proof.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fdelivery-proof.destination.json",
+      "tags": [
+        "delivery",
+        "proof"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:22Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Tracking code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Recipient code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Pieces",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Condition",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "donation",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Donation",
+      "description": "A gift received: donor code, campaign, amount, and the receipt.",
+      "color": "#455A64",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/donation.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/donation.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fdonation.destination.json",
+      "tags": [
+        "donation",
+        "receipt"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:22Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Donor code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Campaign",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Method",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "expense",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Expense",
+      "description": "A cost you paid: who received it, what it was for, and the receipt.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/expense.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/expense.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fexpense.destination.json",
+      "tags": [
+        "expense",
+        "receipt"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:22Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Category",
+          "kind": "choice",
+          "required": false,
+          "hint": "5 options"
+        },
+        {
+          "name": "Description",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Tax",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Payment method",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Project",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Reimbursable",
+          "kind": "yes_no",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "field-lead",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Field lead",
+      "description": "A person or company you met in the field: a scan of the card and the next step.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/field-lead.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/field-lead.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Ffield-lead.destination.json",
+      "tags": [
+        "lead"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:22Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Company",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Contact code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Card",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Interest",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Next step",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "fuel-stop",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Fuel stop",
+      "description": "A fill-up: the vehicle, the pump numbers, the station, and the receipt.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/fuel-stop.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/fuel-stop.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Ffuel-stop.destination.json",
+      "tags": [
+        "fuel",
+        "vehicle"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:22Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Vehicle",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Odometer",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Grade",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Gallons",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Price per gallon",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Station",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Station location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "grocery-item",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Grocery item",
+      "description": "Something bought at a store: scan the barcode, note the price, and pin the store.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/grocery-item.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/grocery-item.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fgrocery-item.destination.json",
+      "tags": [
+        "grocery",
+        "barcode"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:22Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Barcode",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Name",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Brand",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Quantity",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Unit",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Price",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Store",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Store location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-bill",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Bill",
+      "description": "A vendor bill or receipt, scanned.",
+      "color": "#6D4C41",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-bill.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-bill.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fhouse-file-bill.destination.json",
+      "tags": [
+        "house",
+        "receipt"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:29Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-clip",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Clip",
+      "description": "A short video of something a photo does not show, such as a drip.",
+      "color": "#6D4C41",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-clip.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-clip.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fhouse-file-clip.destination.json",
+      "tags": [
+        "house",
+        "video"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:29Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Video",
+          "kind": "video",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-home",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Home",
+      "description": "The building: address, pin, and a photo of the front.",
+      "color": "#6D4C41",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-home.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-home.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fhouse-file-home.destination.json",
+      "tags": [
+        "house"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:29Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Address",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-room",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Room",
+      "description": "A room, with a door tag, a photo, and its condition.",
+      "color": "#6D4C41",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-room.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-room.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fhouse-file-room.destination.json",
+      "tags": [
+        "house",
+        "room"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:29Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Room",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Door tag",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Condition",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-snag",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Snag",
+      "description": "A problem in the house: photo, pin, and priority.",
+      "color": "#6D4C41",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/house-file-snag.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-snag.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fhouse-file-snag.destination.json",
+      "tags": [
+        "house",
+        "snag"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:29Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Room",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Priority",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "incident-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Incident",
+      "description": "Something that went wrong: what happened, how serious, a photo, and the pin.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/incident-log.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/incident-log.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fincident-log.destination.json",
+      "tags": [
+        "incident"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:23Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "What happened",
+          "kind": "long_text",
+          "required": true
+        },
+        {
+          "name": "Severity",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Who",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Immediate action",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "inspection-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Inspection",
+      "description": "A check of a tagged item: pass or fail, the finding, a photo, and the pin.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/inspection-log.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/inspection-log.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Finspection-log.destination.json",
+      "tags": [
+        "inspection"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:23Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Item tag",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Checklist",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Result",
+          "kind": "choice",
+          "required": false,
+          "hint": "2 options"
+        },
+        {
+          "name": "Finding",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "job-round-fault",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Fault",
+      "description": "A fault on tagged equipment: pin, photo, and a video of the problem.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-fault.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-fault.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fjob-round-fault.destination.json",
+      "tags": [
+        "job",
+        "equipment"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:15:29Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Equipment",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Video",
+          "kind": "video",
+          "required": false
+        },
+        {
+          "name": "Severity",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "job-round-job",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Job",
+      "description": "A call: the job code, the customer, and the arrival pin.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-job.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-job.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fjob-round-job.destination.json",
+      "tags": [
+        "job",
+        "site"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:15:29Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Job code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Customer",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "job-round-order",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Order",
+      "description": "The work order, scanned, with its code.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-order.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-order.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fjob-round-order.destination.json",
+      "tags": [
+        "job",
+        "paper"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:15:30Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Order code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Order",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "job-round-part",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Part",
+      "description": "A part used on the job, identified by its code.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-part.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-part.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fjob-round-part.destination.json",
+      "tags": [
+        "job",
+        "part"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:15:30Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Part code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Quantity",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "meal-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Meal",
+      "description": "A meal: what kind, the place, a photo, and what it cost.",
+      "color": "#AD1457",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/meal-log.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/meal-log.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fmeal-log.destination.json",
+      "tags": [
+        "meal"
+      ],
+      "primaryCategory": "health-wellness",
+      "issuedAt": "2026-10-21T03:51:23Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Meal",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Place",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Cost",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "meeting-note",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Meeting",
+      "description": "A meeting in the field: who was there, a photo of the board, and the next step.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/meeting-note.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/meeting-note.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fmeeting-note.destination.json",
+      "tags": [
+        "meeting"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:23Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "With",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Decisions",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Next step",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "mileage",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Mileage",
+      "description": "A drive: why you went, where it started and ended, and the miles.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/mileage.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/mileage.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fmileage.destination.json",
+      "tags": [
+        "mileage",
+        "travel"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:23Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Purpose",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "From",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Start",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "To",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "End",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Miles",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Vehicle",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Client",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "package-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Package",
+      "description": "A parcel that arrived: tracking code, condition, photo, and where it was.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/package-log.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/package-log.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fpackage-log.destination.json",
+      "tags": [
+        "package",
+        "delivery"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:23Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Tracking code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Carrier",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "From",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Contents",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Condition",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "payment-in",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Payment in",
+      "description": "Money that came in, with the reference and the invoice it pays.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/payment-in.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/payment-in.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fpayment-in.destination.json",
+      "tags": [
+        "payment"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:23Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Payer",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Method",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Reference code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Invoice code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "purchase-order",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Purchase order",
+      "description": "An order you placed: the PO code, the vendor, quantities, and a scan.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/purchase-order.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/purchase-order.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fpurchase-order.destination.json",
+      "tags": [
+        "purchase",
+        "order"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:24Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "PO code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Item",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Quantity",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Unit price",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Needed by",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Status",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Scan",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "refund",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Refund",
+      "description": "Money returned to you, with the original reference and the receipt.",
+      "color": "#1565C0",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/refund.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/refund.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Frefund.destination.json",
+      "tags": [
+        "refund",
+        "receipt"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:24Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Merchant",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Reason",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Original reference",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Method",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "return-shipment",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Return shipment",
+      "description": "Something you sent back: the return code, the reason, and a photo.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/return-shipment.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/return-shipment.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Freturn-shipment.destination.json",
+      "tags": [
+        "return",
+        "shipment"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:24Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Return code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Merchant",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Carrier",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Reason",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Refund expected",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "service-record",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Service record",
+      "description": "Work done on something you own: the tag, the vendor, the cost, and the paperwork.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/service-record.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/service-record.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fservice-record.destination.json",
+      "tags": [
+        "service",
+        "maintenance"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:24Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Asset tag",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Asset name",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Work done",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Reading",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Next service",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "shift-note",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Shift note",
+      "description": "The handoff at the end of a shift: the code, a photo, and what the next person should know.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/shift-note.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/shift-note.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fshift-note.destination.json",
+      "tags": [
+        "shift",
+        "handoff"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:24Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Shift code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Role",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Start",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "End",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Site",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Handoff",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-batch",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Batch",
+      "description": "A made batch: lot code, photo, and where it is stored.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-batch.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-batch.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstall-book-batch.destination.json",
+      "tags": [
+        "stall",
+        "batch"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:30Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Lot code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-day",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Day",
+      "description": "A market day: where the stall is, and a photo of it.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-day.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-day.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstall-book-day.destination.json",
+      "tags": [
+        "stall",
+        "market"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:30Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Market",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-invoice",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Invoice",
+      "description": "A supplier invoice, scanned.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-invoice.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-invoice.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstall-book-invoice.destination.json",
+      "tags": [
+        "stall",
+        "invoice"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:30Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Invoice",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-item",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Item",
+      "description": "A good for sale: SKU, photo, and price.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-item.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-item.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstall-book-item.destination.json",
+      "tags": [
+        "stall",
+        "goods"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:30Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "SKU",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Name",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Price",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-slip",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Slip",
+      "description": "A sale: scan the item code and note the quantity.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-slip.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-slip.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstall-book-slip.destination.json",
+      "tags": [
+        "stall",
+        "sale"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:30Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Item code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Quantity",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stock-count",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Stock count",
+      "description": "A count of what is in a bin: scan the barcode and record the quantity.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/stock-count.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stock-count.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstock-count.destination.json",
+      "tags": [
+        "stock",
+        "count"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:24Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Barcode",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Name",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Bin",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Counted",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Unit",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Counter code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-clip",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Clip",
+      "description": "A short video from the site, with its pin.",
+      "color": "#6A1B9A",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-clip.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-clip.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstudy-walk-clip.destination.json",
+      "tags": [
+        "study",
+        "video"
+      ],
+      "primaryCategory": "education",
+      "issuedAt": "2026-10-21T03:15:31Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Video",
+          "kind": "video",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-ground",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Ground",
+      "description": "A study site: name, pin, and a photo.",
+      "color": "#6A1B9A",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-ground.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-ground.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstudy-walk-ground.destination.json",
+      "tags": [
+        "study",
+        "site"
+      ],
+      "primaryCategory": "education",
+      "issuedAt": "2026-10-21T03:15:31Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Site",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-note",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Note",
+      "description": "A field note tied to a subject code, not a full name.",
+      "color": "#6A1B9A",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-note.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-note.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstudy-walk-note.destination.json",
+      "tags": [
+        "study",
+        "note"
+      ],
+      "primaryCategory": "education",
+      "issuedAt": "2026-10-21T03:15:31Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Subject code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-sample",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Sample",
+      "description": "A sample: its vial or bag code, where it was found, and a photo.",
+      "color": "#6A1B9A",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sample.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-sample.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstudy-walk-sample.destination.json",
+      "tags": [
+        "study",
+        "sample"
+      ],
+      "primaryCategory": "education",
+      "issuedAt": "2026-10-21T03:15:31Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Sample code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-sheet",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Sheet",
+      "description": "A scanned page or map, with its record code.",
+      "color": "#6A1B9A",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sheet.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-sheet.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fstudy-walk-sheet.destination.json",
+      "tags": [
+        "study",
+        "scan"
+      ],
+      "primaryCategory": "education",
+      "issuedAt": "2026-10-21T03:15:31Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Record code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Page",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "temperature-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Temperature",
+      "description": "A temperature check: the place, the reading, and a photo of the gauge.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/temperature-log.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/temperature-log.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Ftemperature-log.destination.json",
+      "tags": [
+        "temperature"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:25Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Place",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Equipment",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Reading",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Unit",
+          "kind": "choice",
+          "required": false,
+          "hint": "2 options"
+        },
+        {
+          "name": "In range",
+          "kind": "yes_no",
+          "required": false
+        },
+        {
+          "name": "Gauge",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "time-entry",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Time entry",
+      "description": "Hours on a job: the job code, the task, and the site.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/time-entry.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/time-entry.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Ftime-entry.destination.json",
+      "tags": [
+        "time",
+        "job"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:25Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Job code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Client",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Task",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Start",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "End",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Hours",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Billable",
+          "kind": "yes_no",
+          "required": false
+        },
+        {
+          "name": "Site",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "trip-book-moment",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Moment",
+      "description": "A short video of a moment, with where it was.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-moment.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/trip-book-moment.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Ftrip-book-moment.destination.json",
+      "tags": [
+        "trip",
+        "video"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:31Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Video",
+          "kind": "video",
+          "required": false
+        },
+        {
+          "name": "Caption",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "trip-book-ticket",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Ticket",
+      "description": "A ticket or reservation, with its code and a scan of the paper.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-ticket.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/trip-book-ticket.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Ftrip-book-ticket.destination.json",
+      "tags": [
+        "trip",
+        "ticket"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:31Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Ticket code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Kind",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Ticket",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "trip-book-trip",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Trip",
+      "description": "The trip itself: where it starts, who is along, and the day it opened.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-trip.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/trip-book-trip.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Ftrip-book-trip.destination.json",
+      "tags": [
+        "trip",
+        "travel"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:32Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Start",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Travelers",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "trip-book-visit",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Visit",
+      "description": "A place visited: pin, photo, rating, and whether to come back.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-visit.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/trip-book-visit.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Ftrip-book-visit.destination.json",
+      "tags": [
+        "trip",
+        "place"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:15:32Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Place",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Viewpoint",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Rating",
+          "kind": "choice",
+          "required": false,
+          "hint": "5 options"
+        },
+        {
+          "name": "Come back",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Next time",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Suggested by",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Cost",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "visitor-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Visitor",
+      "description": "Someone on site: badge code, host, purpose, and a photo of the badge.",
+      "color": "#EF6C00",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/visitor-log.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/visitor-log.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fvisitor-log.destination.json",
+      "tags": [
+        "visitor",
+        "badge"
+      ],
+      "primaryCategory": "field-work",
+      "issuedAt": "2026-10-21T03:51:25Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Badge code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Company",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Host",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Purpose",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "warranty",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Warranty",
+      "description": "A product you can still claim on: its code, serial, photo, and receipt.",
+      "color": "#00897B",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/warranty.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/warranty.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fwarranty.destination.json",
+      "tags": [
+        "warranty",
+        "receipt"
+      ],
+      "primaryCategory": "other",
+      "issuedAt": "2026-10-21T03:51:25Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Product code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Product",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Serial",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Price",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Expires",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "work-sample",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Work sample",
+      "description": "A page of work tied to a subject code, with a photo or scan and a score.",
+      "color": "#2E7D32",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/work-sample.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/work-sample.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fwork-sample.destination.json",
+      "tags": [
+        "class",
+        "sample"
+      ],
+      "primaryCategory": "education",
+      "issuedAt": "2026-10-21T03:51:25Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Subject code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Assignment",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Page",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Score",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "workout-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Workout",
+      "description": "A session: the activity, how long, a photo, and where you were.",
+      "color": "#AD1457",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintake/workout-log.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/workout-log.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintake%2Fworkout-log.destination.json",
+      "tags": [
+        "workout"
+      ],
+      "primaryCategory": "health-wellness",
+      "issuedAt": "2026-10-21T03:51:25Z",
+      "hasAttachments": true,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Activity",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Minutes",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Distance",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Effort",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "schemas": [
+    {
+      "id": "appointment",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Appointment",
+      "description": "A visit to a provider: the reason, a scan of the card, and the pin.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/appointment.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fappointment.schema.json",
+      "linkedDestinationIds": [
+        "appointment"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Provider",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Reason",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Card",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Follow-up",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "asset-record",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Asset",
+      "description": "A tagged thing you keep: its photo, condition, custodian, and where it sits.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/asset-record.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fasset-record.schema.json",
+      "linkedDestinationIds": [
+        "asset-record"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Tag",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Name",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Category",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Serial",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Condition",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Custodian code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "class-roll",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Class roll",
+      "description": "Attendance for a class, recorded by subject code rather than a full name.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/class-roll.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fclass-roll.schema.json",
+      "linkedDestinationIds": [
+        "class-roll"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Class",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Subject code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Present",
+          "kind": "yes_no",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cleaning-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Cleaning",
+      "description": "A cleaning pass: the area, photos before and after, and who did it.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/cleaning-log.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fcleaning-log.schema.json",
+      "linkedDestinationIds": [
+        "cleaning-log"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Area",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Task",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Before",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "After",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Done by",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "client-invoice",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Client invoice",
+      "description": "An invoice you sent: its code, the customer, the amount, and a scan.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/client-invoice.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fclient-invoice.schema.json",
+      "linkedDestinationIds": [
+        "client-invoice"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Invoice code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Customer",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Description",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Tax",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Due",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Status",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Scan",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "delivery-proof",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Delivery proof",
+      "description": "Proof a delivery was made: tracking code, recipient code, photo, and pin.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/delivery-proof.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fdelivery-proof.schema.json",
+      "linkedDestinationIds": [
+        "delivery-proof"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Tracking code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Recipient code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Pieces",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Condition",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "donation",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Donation",
+      "description": "A gift received: donor code, campaign, amount, and the receipt.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/donation.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fdonation.schema.json",
+      "linkedDestinationIds": [
+        "donation"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Donor code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Campaign",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Method",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "expense",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Expense",
+      "description": "A cost you paid: who received it, what it was for, and the receipt.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/expense.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fexpense.schema.json",
+      "linkedDestinationIds": [
+        "expense"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Category",
+          "kind": "choice",
+          "required": false,
+          "hint": "5 options"
+        },
+        {
+          "name": "Description",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Tax",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Payment method",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Project",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Reimbursable",
+          "kind": "yes_no",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "field-lead",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Field lead",
+      "description": "A person or company you met in the field: a scan of the card and the next step.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/field-lead.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ffield-lead.schema.json",
+      "linkedDestinationIds": [
+        "field-lead"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Company",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Contact code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Card",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Interest",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Next step",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "fuel-stop",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Fuel stop",
+      "description": "A fill-up: the vehicle, the pump numbers, the station, and the receipt.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/fuel-stop.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ffuel-stop.schema.json",
+      "linkedDestinationIds": [
+        "fuel-stop"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Vehicle",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Odometer",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Grade",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Gallons",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Price per gallon",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Station",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Station location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "grocery-item",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Grocery item",
+      "description": "Something bought at a store: scan the barcode, note the price, and pin the store.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/grocery-item.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fgrocery-item.schema.json",
+      "linkedDestinationIds": [
+        "grocery-item"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Barcode",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Name",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Brand",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Quantity",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Unit",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Price",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Store",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Store location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-bill",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Bill",
+      "description": "A vendor bill or receipt, scanned.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-bill.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fhouse-file-bill.schema.json",
+      "linkedDestinationIds": [
+        "house-file-bill"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-clip",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Clip",
+      "description": "A short video of something a photo does not show, such as a drip.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-clip.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fhouse-file-clip.schema.json",
+      "linkedDestinationIds": [
+        "house-file-clip"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Video",
+          "kind": "video",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-home",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Home",
+      "description": "The building: address, pin, and a photo of the front.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-home.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fhouse-file-home.schema.json",
+      "linkedDestinationIds": [
+        "house-file-home"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Address",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-room",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Room",
+      "description": "A room, with a door tag, a photo, and its condition.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-room.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fhouse-file-room.schema.json",
+      "linkedDestinationIds": [
+        "house-file-room"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Room",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Door tag",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Condition",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "house-file-snag",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Snag",
+      "description": "A problem in the house: photo, pin, and priority.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/house-file-snag.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fhouse-file-snag.schema.json",
+      "linkedDestinationIds": [
+        "house-file-snag"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Room",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Priority",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "incident-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Incident",
+      "description": "Something that went wrong: what happened, how serious, a photo, and the pin.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/incident-log.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fincident-log.schema.json",
+      "linkedDestinationIds": [
+        "incident-log"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "What happened",
+          "kind": "long_text",
+          "required": true
+        },
+        {
+          "name": "Severity",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Who",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Immediate action",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "inspection-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Inspection",
+      "description": "A check of a tagged item: pass or fail, the finding, a photo, and the pin.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/inspection-log.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Finspection-log.schema.json",
+      "linkedDestinationIds": [
+        "inspection-log"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Item tag",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Checklist",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Result",
+          "kind": "choice",
+          "required": false,
+          "hint": "2 options"
+        },
+        {
+          "name": "Finding",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "job-round-fault",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Fault",
+      "description": "A fault on tagged equipment: pin, photo, and a video of the problem.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-fault.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fjob-round-fault.schema.json",
+      "linkedDestinationIds": [
+        "job-round-fault"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Equipment",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Video",
+          "kind": "video",
+          "required": false
+        },
+        {
+          "name": "Severity",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "job-round-job",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Job",
+      "description": "A call: the job code, the customer, and the arrival pin.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-job.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fjob-round-job.schema.json",
+      "linkedDestinationIds": [
+        "job-round-job"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Job code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Customer",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "job-round-order",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Order",
+      "description": "The work order, scanned, with its code.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-order.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fjob-round-order.schema.json",
+      "linkedDestinationIds": [
+        "job-round-order"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Order code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Order",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "job-round-part",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Part",
+      "description": "A part used on the job, identified by its code.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-part.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fjob-round-part.schema.json",
+      "linkedDestinationIds": [
+        "job-round-part"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Part code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Quantity",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "meal-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Meal",
+      "description": "A meal: what kind, the place, a photo, and what it cost.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/meal-log.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fmeal-log.schema.json",
+      "linkedDestinationIds": [
+        "meal-log"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Meal",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Place",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Cost",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "meeting-note",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Meeting",
+      "description": "A meeting in the field: who was there, a photo of the board, and the next step.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/meeting-note.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fmeeting-note.schema.json",
+      "linkedDestinationIds": [
+        "meeting-note"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "With",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Decisions",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Next step",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "mileage",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Mileage",
+      "description": "A drive: why you went, where it started and ended, and the miles.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/mileage.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fmileage.schema.json",
+      "linkedDestinationIds": [
+        "mileage"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Purpose",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "From",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Start",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "To",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "End",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Miles",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Vehicle",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Client",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "package-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Package",
+      "description": "A parcel that arrived: tracking code, condition, photo, and where it was.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/package-log.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fpackage-log.schema.json",
+      "linkedDestinationIds": [
+        "package-log"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Tracking code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Carrier",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "From",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Contents",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Condition",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "payment-in",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Payment in",
+      "description": "Money that came in, with the reference and the invoice it pays.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/payment-in.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fpayment-in.schema.json",
+      "linkedDestinationIds": [
+        "payment-in"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Payer",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Method",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Reference code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Invoice code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "purchase-order",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Purchase order",
+      "description": "An order you placed: the PO code, the vendor, quantities, and a scan.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/purchase-order.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fpurchase-order.schema.json",
+      "linkedDestinationIds": [
+        "purchase-order"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "PO code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Item",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Quantity",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Unit price",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Needed by",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Status",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Scan",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "refund",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Refund",
+      "description": "Money returned to you, with the original reference and the receipt.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/refund.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Frefund.schema.json",
+      "linkedDestinationIds": [
+        "refund"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Merchant",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Reason",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Original reference",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Method",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "return-shipment",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Return shipment",
+      "description": "Something you sent back: the return code, the reason, and a photo.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/return-shipment.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Freturn-shipment.schema.json",
+      "linkedDestinationIds": [
+        "return-shipment"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Return code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Merchant",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Carrier",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Reason",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Refund expected",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "service-record",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Service record",
+      "description": "Work done on something you own: the tag, the vendor, the cost, and the paperwork.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/service-record.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fservice-record.schema.json",
+      "linkedDestinationIds": [
+        "service-record"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Asset tag",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Asset name",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Work done",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Reading",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Amount",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Next service",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "shift-note",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Shift note",
+      "description": "The handoff at the end of a shift: the code, a photo, and what the next person should know.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/shift-note.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fshift-note.schema.json",
+      "linkedDestinationIds": [
+        "shift-note"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Shift code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Role",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Start",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "End",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Site",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Handoff",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-batch",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Batch",
+      "description": "A made batch: lot code, photo, and where it is stored.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-batch.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstall-book-batch.schema.json",
+      "linkedDestinationIds": [
+        "stall-book-batch"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Lot code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-day",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Day",
+      "description": "A market day: where the stall is, and a photo of it.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-day.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstall-book-day.schema.json",
+      "linkedDestinationIds": [
+        "stall-book-day"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Market",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-invoice",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Invoice",
+      "description": "A supplier invoice, scanned.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-invoice.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstall-book-invoice.schema.json",
+      "linkedDestinationIds": [
+        "stall-book-invoice"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Invoice",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-item",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Item",
+      "description": "A good for sale: SKU, photo, and price.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-item.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstall-book-item.schema.json",
+      "linkedDestinationIds": [
+        "stall-book-item"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "SKU",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Name",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Price",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stall-book-slip",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Slip",
+      "description": "A sale: scan the item code and note the quantity.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stall-book-slip.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstall-book-slip.schema.json",
+      "linkedDestinationIds": [
+        "stall-book-slip"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Item code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Quantity",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "stock-count",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Stock count",
+      "description": "A count of what is in a bin: scan the barcode and record the quantity.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/stock-count.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstock-count.schema.json",
+      "linkedDestinationIds": [
+        "stock-count"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Barcode",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Name",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Bin",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Counted",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Unit",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Counter code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-clip",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Clip",
+      "description": "A short video from the site, with its pin.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-clip.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstudy-walk-clip.schema.json",
+      "linkedDestinationIds": [
+        "study-walk-clip"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Video",
+          "kind": "video",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-ground",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Ground",
+      "description": "A study site: name, pin, and a photo.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-ground.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstudy-walk-ground.schema.json",
+      "linkedDestinationIds": [
+        "study-walk-ground"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Site",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-note",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Note",
+      "description": "A field note tied to a subject code, not a full name.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-note.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstudy-walk-note.schema.json",
+      "linkedDestinationIds": [
+        "study-walk-note"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Subject code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-sample",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Sample",
+      "description": "A sample: its vial or bag code, where it was found, and a photo.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-sample.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstudy-walk-sample.schema.json",
+      "linkedDestinationIds": [
+        "study-walk-sample"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Sample code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "study-walk-sheet",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Sheet",
+      "description": "A scanned page or map, with its record code.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/study-walk-sheet.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fstudy-walk-sheet.schema.json",
+      "linkedDestinationIds": [
+        "study-walk-sheet"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Record code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Page",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "temperature-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Temperature",
+      "description": "A temperature check: the place, the reading, and a photo of the gauge.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/temperature-log.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ftemperature-log.schema.json",
+      "linkedDestinationIds": [
+        "temperature-log"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Place",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Equipment",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Reading",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Unit",
+          "kind": "choice",
+          "required": false,
+          "hint": "2 options"
+        },
+        {
+          "name": "In range",
+          "kind": "yes_no",
+          "required": false
+        },
+        {
+          "name": "Gauge",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "time-entry",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Time entry",
+      "description": "Hours on a job: the job code, the task, and the site.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/time-entry.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ftime-entry.schema.json",
+      "linkedDestinationIds": [
+        "time-entry"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Job code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Client",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Task",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Start",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "End",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Hours",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Billable",
+          "kind": "yes_no",
+          "required": false
+        },
+        {
+          "name": "Site",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "trip-book-moment",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Moment",
+      "description": "A short video of a moment, with where it was.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/trip-book-moment.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ftrip-book-moment.schema.json",
+      "linkedDestinationIds": [
+        "trip-book-moment"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Video",
+          "kind": "video",
+          "required": false
+        },
+        {
+          "name": "Caption",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "trip-book-ticket",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Ticket",
+      "description": "A ticket or reservation, with its code and a scan of the paper.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/trip-book-ticket.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ftrip-book-ticket.schema.json",
+      "linkedDestinationIds": [
+        "trip-book-ticket"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Ticket code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Kind",
+          "kind": "choice",
+          "required": false,
+          "hint": "4 options"
+        },
+        {
+          "name": "Ticket",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "trip-book-trip",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Trip",
+      "description": "The trip itself: where it starts, who is along, and the day it opened.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/trip-book-trip.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ftrip-book-trip.schema.json",
+      "linkedDestinationIds": [
+        "trip-book-trip"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Start",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Travelers",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "trip-book-visit",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Visit",
+      "description": "A place visited: pin, photo, rating, and whether to come back.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/trip-book-visit.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Ftrip-book-visit.schema.json",
+      "linkedDestinationIds": [
+        "trip-book-visit"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Place",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Viewpoint",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Rating",
+          "kind": "choice",
+          "required": false,
+          "hint": "5 options"
+        },
+        {
+          "name": "Come back",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Next time",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Suggested by",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Cost",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        },
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "visitor-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Visitor",
+      "description": "Someone on site: badge code, host, purpose, and a photo of the badge.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/visitor-log.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fvisitor-log.schema.json",
+      "linkedDestinationIds": [
+        "visitor-log"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Badge code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Company",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Host",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Purpose",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "warranty",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Warranty",
+      "description": "A product you can still claim on: its code, serial, photo, and receipt.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/warranty.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fwarranty.schema.json",
+      "linkedDestinationIds": [
+        "warranty"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Product code",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Product",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Serial",
+          "kind": "identifier",
+          "required": false
+        },
+        {
+          "name": "Vendor",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Price",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Expires",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Receipt",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "work-sample",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Work sample",
+      "description": "A page of work tied to a subject code, with a photo or scan and a score.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/work-sample.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fwork-sample.schema.json",
+      "linkedDestinationIds": [
+        "work-sample"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Subject code",
+          "kind": "identifier",
+          "required": true
+        },
+        {
+          "name": "Assignment",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "Page",
+          "kind": "document_scan",
+          "required": false
+        },
+        {
+          "name": "Score",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "workout-log",
+      "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
+      "title": "Workout",
+      "description": "A session: the activity, how long, a photo, and where you were.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/workout-log.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintake%2Fworkout-log.schema.json",
+      "linkedDestinationIds": [
+        "workout-log"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Date",
+          "kind": "date",
+          "required": false
+        },
+        {
+          "name": "Activity",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Minutes",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Distance",
+          "kind": "number",
+          "required": false
+        },
+        {
+          "name": "Effort",
+          "kind": "choice",
+          "required": false,
+          "hint": "3 options"
+        },
+        {
+          "name": "Photo",
+          "kind": "photo",
+          "required": false
+        },
+        {
+          "name": "Location",
+          "kind": "location",
+          "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "house-file",
+      "publisherSlug": "xmintake",
+      "name": "House file",
+      "description": "A home walkthrough. House holds the building and its rooms. Fix holds snags, bills, and clips. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+      "source": "https://xmintake.github.io/registry/scenarios/xmintake/house-file.scenario.json",
+      "runUrl": "https://xmintake.xmarin.dev/scenario/run?scenarioUrl=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fscenarios%2Fxmintake%2Fhouse-file.scenario.json",
+      "stepCount": 7,
+      "workspaces": [
+        "House",
+        "Fix"
+      ],
+      "installs": [
+        {
+          "stepId": "house-file-home",
+          "title": "Home",
+          "workspaceName": "House",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-home.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "house-file-room",
+          "title": "Room",
+          "workspaceName": "House",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-room.destination.json",
+          "tabName": "Room"
+        },
+        {
+          "stepId": "house-file-snag",
+          "title": "Snag",
+          "workspaceName": "Fix",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-snag.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "house-file-bill",
+          "title": "Bill",
+          "workspaceName": "Fix",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-bill.destination.json",
+          "tabName": "Bill"
+        },
+        {
+          "stepId": "house-file-clip",
+          "title": "Clip",
+          "workspaceName": "Fix",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/house-file-clip.destination.json",
+          "tabName": "Clip"
+        }
+      ]
+    },
+    {
+      "id": "job-round",
+      "publisherSlug": "xmintake",
+      "name": "Job round",
+      "description": "A site call. Job holds the call and the scanned order. Gear holds faults and parts. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+      "source": "https://xmintake.github.io/registry/scenarios/xmintake/job-round.scenario.json",
+      "runUrl": "https://xmintake.xmarin.dev/scenario/run?scenarioUrl=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fscenarios%2Fxmintake%2Fjob-round.scenario.json",
+      "stepCount": 6,
+      "workspaces": [
+        "Job",
+        "Gear"
+      ],
+      "installs": [
+        {
+          "stepId": "job-round-job",
+          "title": "Job",
+          "workspaceName": "Job",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/job-round-job.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "job-round-order",
+          "title": "Order",
+          "workspaceName": "Job",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/job-round-order.destination.json",
+          "tabName": "Order"
+        },
+        {
+          "stepId": "job-round-fault",
+          "title": "Fault",
+          "workspaceName": "Gear",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/job-round-fault.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "job-round-part",
+          "title": "Part",
+          "workspaceName": "Gear",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/job-round-part.destination.json",
+          "tabName": "Part"
+        }
+      ]
+    },
+    {
+      "id": "stall-book",
+      "publisherSlug": "xmintake",
+      "name": "Stall book",
+      "description": "A market stall. Goods holds items and batches. Market holds the day, sales slips, and invoices. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+      "source": "https://xmintake.github.io/registry/scenarios/xmintake/stall-book.scenario.json",
+      "runUrl": "https://xmintake.xmarin.dev/scenario/run?scenarioUrl=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fscenarios%2Fxmintake%2Fstall-book.scenario.json",
+      "stepCount": 7,
+      "workspaces": [
+        "Goods",
+        "Market"
+      ],
+      "installs": [
+        {
+          "stepId": "stall-book-item",
+          "title": "Item",
+          "workspaceName": "Goods",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-item.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "stall-book-batch",
+          "title": "Batch",
+          "workspaceName": "Goods",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-batch.destination.json",
+          "tabName": "Batch"
+        },
+        {
+          "stepId": "stall-book-day",
+          "title": "Day",
+          "workspaceName": "Market",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-day.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "stall-book-slip",
+          "title": "Slip",
+          "workspaceName": "Market",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-slip.destination.json",
+          "tabName": "Slip"
+        },
+        {
+          "stepId": "stall-book-invoice",
+          "title": "Invoice",
+          "workspaceName": "Market",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-invoice.destination.json",
+          "tabName": "Invoice"
+        }
+      ]
+    },
+    {
+      "id": "study-walk",
+      "publisherSlug": "xmintake",
+      "name": "Study walk",
+      "description": "Field notes. Site holds the ground and samples. Record holds notes, scanned pages, and clips. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+      "source": "https://xmintake.github.io/registry/scenarios/xmintake/study-walk.scenario.json",
+      "runUrl": "https://xmintake.xmarin.dev/scenario/run?scenarioUrl=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fscenarios%2Fxmintake%2Fstudy-walk.scenario.json",
+      "stepCount": 7,
+      "workspaces": [
+        "Site",
+        "Record"
+      ],
+      "installs": [
+        {
+          "stepId": "study-walk-ground",
+          "title": "Ground",
+          "workspaceName": "Site",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-ground.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "study-walk-sample",
+          "title": "Sample",
+          "workspaceName": "Site",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sample.destination.json",
+          "tabName": "Sample"
+        },
+        {
+          "stepId": "study-walk-note",
+          "title": "Note",
+          "workspaceName": "Record",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-note.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "study-walk-sheet",
+          "title": "Sheet",
+          "workspaceName": "Record",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-sheet.destination.json",
+          "tabName": "Sheet"
+        },
+        {
+          "stepId": "study-walk-clip",
+          "title": "Clip",
+          "workspaceName": "Record",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/study-walk-clip.destination.json",
+          "tabName": "Clip"
+        }
+      ]
+    },
+    {
+      "id": "trip-book",
+      "publisherSlug": "xmintake",
+      "name": "Trip book",
+      "description": "Travel capture. Trip holds the journey and tickets. Places holds visits and short videos. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+      "source": "https://xmintake.github.io/registry/scenarios/xmintake/trip-book.scenario.json",
+      "runUrl": "https://xmintake.xmarin.dev/scenario/run?scenarioUrl=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fscenarios%2Fxmintake%2Ftrip-book.scenario.json",
+      "stepCount": 6,
+      "workspaces": [
+        "Trip",
+        "Places"
+      ],
+      "installs": [
+        {
+          "stepId": "trip-book-trip",
+          "title": "Trip",
+          "workspaceName": "Trip",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-trip.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "trip-book-ticket",
+          "title": "Ticket",
+          "workspaceName": "Trip",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-ticket.destination.json",
+          "tabName": "Ticket"
+        },
+        {
+          "stepId": "trip-book-visit",
+          "title": "Visit",
+          "workspaceName": "Places",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-visit.destination.json",
+          "tabName": ""
+        },
+        {
+          "stepId": "trip-book-moment",
+          "title": "Moment",
+          "workspaceName": "Places",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-moment.destination.json",
+          "tabName": "Moment"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.house-file-snag",
+  "schemaVersion": "1.0",
+  "title": "Snag",
+  "description": "A problem in the house: photo, pin, and priority.",
+  "fields": {
+    "Room": {
+      "type": "string",
+      "label": "Room",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Priority": {
+      "type": "enum",
+      "label": "Priority",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Low",
+          "Medium",
+          "High"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

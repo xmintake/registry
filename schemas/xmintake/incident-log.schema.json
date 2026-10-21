@@ -1,0 +1,70 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.incident-log",
+  "schemaVersion": "1.0",
+  "title": "Incident",
+  "description": "Something that went wrong: what happened, how serious, a photo, and the pin.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "What happened": {
+      "type": "string",
+      "label": "What happened",
+      "nullable": false,
+      "uiVariant": "multi_line"
+    },
+    "Severity": {
+      "type": "enum",
+      "label": "Severity",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Low",
+          "Medium",
+          "High"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Who": {
+      "type": "string",
+      "label": "Who",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Immediate action": {
+      "type": "string",
+      "label": "Immediate action",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

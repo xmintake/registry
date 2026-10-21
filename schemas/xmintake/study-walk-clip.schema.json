@@ -1,0 +1,33 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.study-walk-clip",
+  "schemaVersion": "1.0",
+  "title": "Clip",
+  "description": "A short video from the site, with its pin.",
+  "fields": {
+    "Video": {
+      "type": "attachment",
+      "label": "Video",
+      "nullable": true,
+      "uiVariant": "video",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    }
+  }
+}

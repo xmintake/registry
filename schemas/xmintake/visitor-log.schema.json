@@ -1,0 +1,63 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.visitor-log",
+  "schemaVersion": "1.0",
+  "title": "Visitor",
+  "description": "Someone on site: badge code, host, purpose, and a photo of the badge.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Badge code": {
+      "type": "string",
+      "label": "Badge code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Company": {
+      "type": "string",
+      "label": "Company",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Host": {
+      "type": "string",
+      "label": "Host",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Purpose": {
+      "type": "string",
+      "label": "Purpose",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

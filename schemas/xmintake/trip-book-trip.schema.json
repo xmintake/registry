@@ -1,0 +1,40 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.trip-book-trip",
+  "schemaVersion": "1.0",
+  "title": "Trip",
+  "description": "The trip itself: where it starts, who is along, and the day it opened.",
+  "fields": {
+    "Title": {
+      "type": "string",
+      "label": "Title",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Start": {
+      "type": "location",
+      "label": "Start",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Travelers": {
+      "type": "string",
+      "label": "Travelers",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

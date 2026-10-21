@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "health-wellness",
+      "label": "Health & wellness"
+    },
+    {
+      "id": "field-work",
+      "label": "Field work"
+    },
+    {
+      "id": "education",
+      "label": "Education"
+    },
+    {
+      "id": "other",
+      "label": "Other"
+    }
+  ]
+}

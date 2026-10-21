@@ -1,0 +1,34 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "meeting-note",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/meeting-note.destination.json",
+  "title": "Meeting",
+  "description": "A meeting in the field: who was there, a photo of the board, and the next step.",
+  "color": "#EF6C00",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/meeting-note.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "field-work",
+  "tags": [
+    "meeting"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:51:23Z",
+  "issuedAt": "2026-10-21T03:51:23Z",
+  "expiresAt": "2027-10-21T03:51:23Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:51:23Z",
+    "issuedAt": "2026-10-21T03:51:23Z",
+    "expiresAt": "2027-10-21T03:51:23Z",
+    "signature": "x4dPwiMQJ13/j3Z+Noc15owpp+sHVVzXRebO1MUSvHyk2OZcLDffm/mOHubupiYPGAlQW4czCWbjg8BrWkKqCA=="
+  }
+}

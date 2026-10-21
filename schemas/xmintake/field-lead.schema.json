@@ -1,0 +1,63 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.field-lead",
+  "schemaVersion": "1.0",
+  "title": "Field lead",
+  "description": "A person or company you met in the field: a scan of the card and the next step.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Company": {
+      "type": "string",
+      "label": "Company",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Contact code": {
+      "type": "string",
+      "label": "Contact code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Card": {
+      "type": "attachment",
+      "label": "Card",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Interest": {
+      "type": "string",
+      "label": "Interest",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Next step": {
+      "type": "string",
+      "label": "Next step",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

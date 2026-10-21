@@ -1,0 +1,83 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.purchase-order",
+  "schemaVersion": "1.0",
+  "title": "Purchase order",
+  "description": "An order you placed: the PO code, the vendor, quantities, and a scan.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "PO code": {
+      "type": "string",
+      "label": "PO code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Vendor": {
+      "type": "string",
+      "label": "Vendor",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Item": {
+      "type": "string",
+      "label": "Item",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Quantity": {
+      "type": "number",
+      "label": "Quantity",
+      "nullable": true
+    },
+    "Unit price": {
+      "type": "number",
+      "label": "Unit price",
+      "nullable": true
+    },
+    "Amount": {
+      "type": "number",
+      "label": "Amount",
+      "nullable": true
+    },
+    "Needed by": {
+      "type": "date",
+      "label": "Needed by",
+      "nullable": true
+    },
+    "Status": {
+      "type": "enum",
+      "label": "Status",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Open",
+          "Sent",
+          "Received",
+          "Closed"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Scan": {
+      "type": "attachment",
+      "label": "Scan",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

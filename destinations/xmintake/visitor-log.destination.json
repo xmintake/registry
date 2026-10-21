@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "visitor-log",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/visitor-log.destination.json",
+  "title": "Visitor",
+  "description": "Someone on site: badge code, host, purpose, and a photo of the badge.",
+  "color": "#EF6C00",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/visitor-log.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "field-work",
+  "tags": [
+    "visitor",
+    "badge"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:51:25Z",
+  "issuedAt": "2026-10-21T03:51:25Z",
+  "expiresAt": "2027-10-21T03:51:25Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:51:25Z",
+    "issuedAt": "2026-10-21T03:51:25Z",
+    "expiresAt": "2027-10-21T03:51:25Z",
+    "signature": "8RiS2rIncdPiQljDprLW9Ly21/flgbIztUFIXEs7GrdpirBLL61XtOpzn+NHXEXhogVwrCrTzp4nKanZ6XLhBA=="
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.trip-book-visit",
+  "schemaVersion": "1.0",
+  "title": "Visit",
+  "description": "A place visited: pin, photo, rating, and whether to come back.",
+  "fields": {
+    "Place": {
+      "type": "string",
+      "label": "Place",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Code": {
+      "type": "string",
+      "label": "Code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Viewpoint": {
+      "type": "location",
+      "label": "Viewpoint",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Rating": {
+      "type": "enum",
+      "label": "Rating",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Come back": {
+      "type": "enum",
+      "label": "Come back",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Yes",
+          "Maybe",
+          "No"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Next time": {
+      "type": "string",
+      "label": "Next time",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Suggested by": {
+      "type": "string",
+      "label": "Suggested by",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Cost": {
+      "type": "enum",
+      "label": "Cost",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Free",
+          "Low",
+          "High"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    }
+  }
+}

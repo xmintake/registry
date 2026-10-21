@@ -1,0 +1,101 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "createdBy": "xmintake",
+  "description": "A market stall. Goods holds items and batches. Market holds the day, sales slips, and invoices. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+  "version": "2.0",
+  "permissions": [
+    "navigate",
+    "addDestination"
+  ],
+  "scenario": {
+    "name": "Stall book",
+    "onError": "ask",
+    "onExists": "skip",
+    "steps": [
+      {
+        "id": "ws-goods",
+        "description": "Goods workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "Goods"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "stall-book-item",
+        "description": "Item",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Goods",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-item.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "goodsSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "stall-book-batch",
+        "description": "Batch",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Goods",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-batch.destination.json",
+          "spreadsheetId": "${goodsSheet}",
+          "tabName": "Batch"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "ws-market",
+        "description": "Market workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "Market"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "stall-book-day",
+        "description": "Day",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Market",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-day.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "marketSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "stall-book-slip",
+        "description": "Slip",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Market",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-slip.destination.json",
+          "spreadsheetId": "${marketSheet}",
+          "tabName": "Slip"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "stall-book-invoice",
+        "description": "Invoice",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Market",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/stall-book-invoice.destination.json",
+          "spreadsheetId": "${marketSheet}",
+          "tabName": "Invoice"
+        },
+        "timeoutMs": 60000
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "94L+GGLtV66Oe0bt51hwvd/jkk8ei9HGnYcGKD4aGvU2CoLBQ6OSWpAgL5NcV20VOU5KyWuPN8wG/N7Je7djDA=="
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.job-round-job",
+  "schemaVersion": "1.0",
+  "title": "Job",
+  "description": "A call: the job code, the customer, and the arrival pin.",
+  "fields": {
+    "Job code": {
+      "type": "string",
+      "label": "Job code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Customer": {
+      "type": "string",
+      "label": "Customer",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

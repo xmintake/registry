@@ -1,0 +1,79 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.fuel-stop",
+  "schemaVersion": "1.0",
+  "title": "Fuel stop",
+  "description": "A fill-up: the vehicle, the pump numbers, the station, and the receipt.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Vehicle": {
+      "type": "string",
+      "label": "Vehicle",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Odometer": {
+      "type": "number",
+      "label": "Odometer",
+      "nullable": true
+    },
+    "Grade": {
+      "type": "enum",
+      "label": "Grade",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Regular",
+          "Plus",
+          "Diesel",
+          "Other"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Gallons": {
+      "type": "number",
+      "label": "Gallons",
+      "nullable": true
+    },
+    "Price per gallon": {
+      "type": "number",
+      "label": "Price per gallon",
+      "nullable": true
+    },
+    "Amount": {
+      "type": "number",
+      "label": "Amount",
+      "nullable": true
+    },
+    "Station": {
+      "type": "string",
+      "label": "Station",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Station location": {
+      "type": "location",
+      "label": "Station location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Receipt": {
+      "type": "attachment",
+      "label": "Receipt",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.stall-book-invoice",
+  "schemaVersion": "1.0",
+  "title": "Invoice",
+  "description": "A supplier invoice, scanned.",
+  "fields": {
+    "Vendor": {
+      "type": "string",
+      "label": "Vendor",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Invoice": {
+      "type": "attachment",
+      "label": "Invoice",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.work-sample",
+  "schemaVersion": "1.0",
+  "title": "Work sample",
+  "description": "A page of work tied to a subject code, with a photo or scan and a score.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Subject code": {
+      "type": "string",
+      "label": "Subject code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Assignment": {
+      "type": "string",
+      "label": "Assignment",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Page": {
+      "type": "attachment",
+      "label": "Page",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Score": {
+      "type": "number",
+      "label": "Score",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

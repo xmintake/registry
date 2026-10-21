@@ -1,0 +1,89 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "createdBy": "xmintake",
+  "description": "Travel capture. Trip holds the journey and tickets. Places holds visits and short videos. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+  "version": "2.0",
+  "permissions": [
+    "navigate",
+    "addDestination"
+  ],
+  "scenario": {
+    "name": "Trip book",
+    "onError": "ask",
+    "onExists": "skip",
+    "steps": [
+      {
+        "id": "ws-trip",
+        "description": "Trip workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "Trip"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "trip-book-trip",
+        "description": "Trip",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Trip",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-trip.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "tripSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "trip-book-ticket",
+        "description": "Ticket",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Trip",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-ticket.destination.json",
+          "spreadsheetId": "${tripSheet}",
+          "tabName": "Ticket"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "ws-places",
+        "description": "Places workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "Places"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "trip-book-visit",
+        "description": "Visit",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Places",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-visit.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "placesSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "trip-book-moment",
+        "description": "Moment",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Places",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/trip-book-moment.destination.json",
+          "spreadsheetId": "${placesSheet}",
+          "tabName": "Moment"
+        },
+        "timeoutMs": 60000
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "J9ReHQkjwWIMNwAXuVopua50WnaLTdzwMVcu/JR9NMFTkryODG6wd+jxvJLDv9DFJoyBhOQayOOc3KmAxDI7Cg=="
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "return-shipment",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/return-shipment.destination.json",
+  "title": "Return shipment",
+  "description": "Something you sent back: the return code, the reason, and a photo.",
+  "color": "#00897B",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/return-shipment.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "other",
+  "tags": [
+    "return",
+    "shipment"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:51:24Z",
+  "issuedAt": "2026-10-21T03:51:24Z",
+  "expiresAt": "2027-10-21T03:51:24Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:51:24Z",
+    "issuedAt": "2026-10-21T03:51:24Z",
+    "expiresAt": "2027-10-21T03:51:24Z",
+    "signature": "QJtbsrFY0/SN/pifNO7MyyS5b6y4cATAZPIOBY23liDiCMrinPl3/Szp8loDQsgc4pXdts+XnyXjf2NvHiyNBg=="
+  }
+}

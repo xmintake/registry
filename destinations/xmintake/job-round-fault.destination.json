@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "job-round-fault",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/job-round-fault.destination.json",
+  "title": "Fault",
+  "description": "A fault on tagged equipment: pin, photo, and a video of the problem.",
+  "color": "#1565C0",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/job-round-fault.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "field-work",
+  "tags": [
+    "job",
+    "equipment"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:15:29Z",
+  "issuedAt": "2026-10-21T03:15:29Z",
+  "expiresAt": "2027-10-21T03:15:29Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:15:29Z",
+    "issuedAt": "2026-10-21T03:15:29Z",
+    "expiresAt": "2027-10-21T03:15:29Z",
+    "signature": "rQTBjTQ1RugJ3Z69+bt7+sd0R2GQ8m90JBFy/GUMltTK4kdFEPc/PscVSF+wU0R7i7BMloD0uoTLZGqhwbaGDg=="
+  }
+}

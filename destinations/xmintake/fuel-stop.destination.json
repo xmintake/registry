@@ -1,0 +1,35 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "fuel-stop",
+  "source": "https://xmintake.github.io/registry/destinations/xmintake/fuel-stop.destination.json",
+  "title": "Fuel stop",
+  "description": "A fill-up: the vehicle, the pump numbers, the station, and the receipt.",
+  "color": "#00897B",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintake/fuel-stop.schema.json",
+  "visibility": "PUBLIC",
+  "primaryCategory": "other",
+  "tags": [
+    "fuel",
+    "vehicle"
+  ],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-10-21T03:51:22Z",
+  "issuedAt": "2026-10-21T03:51:22Z",
+  "expiresAt": "2027-10-21T03:51:22Z",
+  "certificate": {
+    "publisher": {
+      "name": "XMIntake",
+      "type": "COMMUNITY",
+      "website": "https://www.xmarin.dev",
+      "supportEmail": "support@xmarin.dev",
+      "supportPhone": "+1-765-532-6151"
+    },
+    "quotaPolicy": "SPONSORED",
+    "createdAt": "2026-10-21T03:51:22Z",
+    "issuedAt": "2026-10-21T03:51:22Z",
+    "expiresAt": "2027-10-21T03:51:22Z",
+    "signature": "unw67UiCufcpggx8tPC3Z9Lzo8LmOuMc7DAZ5lxt/ai+HBlT/Fat34aPuNK8mFip0po8XjjJyjuoafRqnMZhBQ=="
+  }
+}

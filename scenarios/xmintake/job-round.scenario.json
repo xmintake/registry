@@ -1,0 +1,89 @@
+{
+  "$schema": "https://xmintake.github.io/data-schemas/meta/xmintake-scenario-schema.v2.json",
+  "createdBy": "xmintake",
+  "description": "A site call. Job holds the call and the scanned order. Gear holds faults and parts. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
+  "version": "2.0",
+  "permissions": [
+    "navigate",
+    "addDestination"
+  ],
+  "scenario": {
+    "name": "Job round",
+    "onError": "ask",
+    "onExists": "skip",
+    "steps": [
+      {
+        "id": "ws-job",
+        "description": "Job workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "Job"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "job-round-job",
+        "description": "Job",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Job",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/job-round-job.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "jobSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "job-round-order",
+        "description": "Order",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Job",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/job-round-order.destination.json",
+          "spreadsheetId": "${jobSheet}",
+          "tabName": "Order"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "ws-gear",
+        "description": "Gear workspace",
+        "appLink": "https://xmintake.xmarin.dev/a/ws/create",
+        "params": {
+          "name": "Gear"
+        },
+        "timeoutMs": 60000
+      },
+      {
+        "id": "job-round-fault",
+        "description": "Fault",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Gear",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/job-round-fault.destination.json"
+        },
+        "timeoutMs": 60000,
+        "capture": {
+          "gearSheet": "$.response.spreadsheetId"
+        }
+      },
+      {
+        "id": "job-round-part",
+        "description": "Part",
+        "appLink": "https://xmintake.xmarin.dev/a/dest/install-registry",
+        "params": {
+          "workspaceName": "Gear",
+          "sourceUrl": "https://xmintake.github.io/registry/destinations/xmintake/job-round-part.destination.json",
+          "spreadsheetId": "${gearSheet}",
+          "tabName": "Part"
+        },
+        "timeoutMs": 60000
+      }
+    ]
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "/Es7SUyfNphRd7Ak056oGZzicab9tq/Za/zpE+yGpS758yAsevXVGEO8axF76bs5dym7qu4z2gJnNpWSP9wfAw=="
+  }
+}

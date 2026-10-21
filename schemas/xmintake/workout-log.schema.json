@@ -1,0 +1,68 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.workout-log",
+  "schemaVersion": "1.0",
+  "title": "Workout",
+  "description": "A session: the activity, how long, a photo, and where you were.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Activity": {
+      "type": "string",
+      "label": "Activity",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Minutes": {
+      "type": "number",
+      "label": "Minutes",
+      "nullable": true
+    },
+    "Distance": {
+      "type": "number",
+      "label": "Distance",
+      "nullable": true
+    },
+    "Effort": {
+      "type": "enum",
+      "label": "Effort",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Easy",
+          "Moderate",
+          "Hard"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

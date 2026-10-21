@@ -1,0 +1,39 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.house-file-home",
+  "schemaVersion": "1.0",
+  "title": "Home",
+  "description": "The building: address, pin, and a photo of the front.",
+  "fields": {
+    "Address": {
+      "type": "string",
+      "label": "Address",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    }
+  }
+}

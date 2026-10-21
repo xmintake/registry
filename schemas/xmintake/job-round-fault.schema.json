@@ -1,0 +1,69 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.job-round-fault",
+  "schemaVersion": "1.0",
+  "title": "Fault",
+  "description": "A fault on tagged equipment: pin, photo, and a video of the problem.",
+  "fields": {
+    "Equipment": {
+      "type": "string",
+      "label": "Equipment",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Video": {
+      "type": "attachment",
+      "label": "Video",
+      "nullable": true,
+      "uiVariant": "video",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Severity": {
+      "type": "enum",
+      "label": "Severity",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Low",
+          "Medium",
+          "High"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

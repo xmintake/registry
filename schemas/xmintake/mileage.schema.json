@@ -1,0 +1,71 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.mileage",
+  "schemaVersion": "1.0",
+  "title": "Mileage",
+  "description": "A drive: why you went, where it started and ended, and the miles.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Purpose": {
+      "type": "string",
+      "label": "Purpose",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "From": {
+      "type": "string",
+      "label": "From",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Start": {
+      "type": "location",
+      "label": "Start",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "To": {
+      "type": "string",
+      "label": "To",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "End": {
+      "type": "location",
+      "label": "End",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Miles": {
+      "type": "number",
+      "label": "Miles",
+      "nullable": true
+    },
+    "Vehicle": {
+      "type": "string",
+      "label": "Vehicle",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Client": {
+      "type": "string",
+      "label": "Client",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

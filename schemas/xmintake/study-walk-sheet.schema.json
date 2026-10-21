@@ -1,0 +1,31 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.study-walk-sheet",
+  "schemaVersion": "1.0",
+  "title": "Sheet",
+  "description": "A scanned page or map, with its record code.",
+  "fields": {
+    "Record code": {
+      "type": "string",
+      "label": "Record code",
+      "nullable": true,
+      "uiVariant": "identifier_code"
+    },
+    "Page": {
+      "type": "attachment",
+      "label": "Page",
+      "nullable": true,
+      "uiVariant": "document_scan",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    }
+  }
+}

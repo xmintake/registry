@@ -1,0 +1,76 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.package-log",
+  "schemaVersion": "1.0",
+  "title": "Package",
+  "description": "A parcel that arrived: tracking code, condition, photo, and where it was.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Tracking code": {
+      "type": "string",
+      "label": "Tracking code",
+      "nullable": false,
+      "uiVariant": "identifier_code"
+    },
+    "Carrier": {
+      "type": "string",
+      "label": "Carrier",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "From": {
+      "type": "string",
+      "label": "From",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Contents": {
+      "type": "string",
+      "label": "Contents",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Condition": {
+      "type": "enum",
+      "label": "Condition",
+      "nullable": true,
+      "enum": {
+        "values": [
+          "Intact",
+          "Damaged",
+          "Opened"
+        ],
+        "acceptNewValues": false
+      }
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}

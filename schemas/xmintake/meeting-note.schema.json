@@ -1,0 +1,63 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintake.meeting-note",
+  "schemaVersion": "1.0",
+  "title": "Meeting",
+  "description": "A meeting in the field: who was there, a photo of the board, and the next step.",
+  "fields": {
+    "Date": {
+      "type": "date",
+      "label": "Date",
+      "nullable": true
+    },
+    "Title": {
+      "type": "string",
+      "label": "Title",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "With": {
+      "type": "string",
+      "label": "With",
+      "nullable": true,
+      "uiVariant": "single_line"
+    },
+    "Location": {
+      "type": "location",
+      "label": "Location",
+      "nullable": true,
+      "location": {
+        "exportFormat": "URL"
+      }
+    },
+    "Photo": {
+      "type": "attachment",
+      "label": "Photo",
+      "nullable": true,
+      "uiVariant": "photo",
+      "attachment": {
+        "maxFiles": 1,
+        "storeInDrive": true,
+        "outputFormat": "name+url"
+      }
+    },
+    "Decisions": {
+      "type": "string",
+      "label": "Decisions",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Next step": {
+      "type": "string",
+      "label": "Next step",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  }
+}
