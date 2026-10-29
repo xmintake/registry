@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T03:59:38Z",
+  "generatedAt": "2026-10-29T20:51:59Z",
   "publishers": [
     {
       "publisherSlug": "xmintake",
@@ -14,6 +14,21 @@
         "destinations": 53,
         "schemas": 53,
         "scenarios": 5
+      }
+    },
+    {
+      "publisherSlug": "xmintakedemoxmintake-demo",
+      "publisherStatus": "ACTIVE",
+      "name": "XMIntake Demo",
+      "type": "INDIVIDUAL",
+      "tagline": null,
+      "website": null,
+      "supportEmail": "xmintakedemo@gmail.com",
+      "joinedAt": "2026-10-29",
+      "counts": {
+        "destinations": 0,
+        "schemas": 0,
+        "scenarios": 0
       }
     }
   ]
