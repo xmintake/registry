@@ -24,12 +24,12 @@
       "type": "COMMUNITY",
       "website": "https://www.xmarin.dev",
       "supportEmail": "support@xmarin.dev",
-      "supportPhone": "+1-765-532-6151"
+      "supportPhone": "Not listed"
     },
     "quotaPolicy": "SPONSORED",
     "createdAt": "2026-10-21T03:51:23Z",
     "issuedAt": "2026-10-21T03:51:23Z",
     "expiresAt": "2027-10-21T03:51:23Z",
-    "signature": "W17HqzCqSGHma0QIMq13U5AOiaMyMosq1jsx9jBWxSWu/NBgtc+/2gYcdAtfDArbGO3xzHnEayk5SmztHmx5BA=="
+    "signature": "SV6yw1ZcItMdDDQhlY0oTLCPS/TbVKs6u4J4W1BYGXe6ZMzm6J31cFkhd3GykpiJihRiJTxTyUkc7PXkPrV6Cg=="
   }
 }
