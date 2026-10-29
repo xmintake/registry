@@ -35,5 +35,9 @@
         "exportFormat": "URL"
       }
     }
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "x7NTQoujOofPacvs0K1YRFfDkjjUcUjlbe2taJBlaeQC0YX2/HB5FKVudpcYHsIOSCazMREvz58R0ZMUfbXXAw=="
   }
 }

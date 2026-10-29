@@ -27,5 +27,9 @@
       "label": "Date",
       "nullable": true
     }
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "fkNMy8QsqeG68aVgIDF39ewrH11+fwHIWrwnCA9isGE5Zo/lHDOZsjWfckEc3lWI5iGaxDir+XSB8xTvlqRGAg=="
   }
 }

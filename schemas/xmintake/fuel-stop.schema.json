@@ -75,5 +75,9 @@
         "outputFormat": "name+url"
       }
     }
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "GWBZlID+6gG+H80TB0eRUzxgrGdDCeRyboPH+xZlNc/1LHsTSZ41vGy9Szydjgzgb93p1Q1lifUnb5UPIZS2CA=="
   }
 }

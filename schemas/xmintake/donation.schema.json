@@ -58,5 +58,9 @@
       "nullable": true,
       "uiVariant": "multi_line"
     }
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "uQVBwIMOu+0m8mf7VFufg78xN4ovGzroWQFo+ZvPQkIxybLdCx88Lwc90kJ68+OgsCqudSjggClwHEM1IEYACQ=="
   }
 }
