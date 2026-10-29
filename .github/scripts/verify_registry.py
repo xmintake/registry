@@ -45,6 +45,7 @@ ALLOWED_TOP_LEVEL = {
 FORBIDDEN_TOP_LEVEL = {"publishers", "submissions", "deletions", "tools", "service", "published-index.json"}
 PRIVATE_PUBLISHER_KEYS = {"allowedIdentities", "defaultQuotaPolicy", "audiences", "registeredBy"}
 PHONE_PRIVATE_TYPES = {"INDIVIDUAL", "COMMUNITY"}
+PHONE_NOT_LISTED = "Not listed"
 VISIBILITIES = {"PUBLIC", "UNLISTED"}
 URL_PARAM_KEYS = {"sourceUrl", "schemaUrl", "url", "scenarioUrl"}
 
@@ -215,6 +216,12 @@ def check_destinations(root: Path, key: Path, problems: list[str]) -> None:
             problems.append(f"{rel}: schemaUrl must be a registry schema ({schema_url or 'missing'})")
         elif not (root / schema_url[len(REGISTRY_HOST) + 1:]).is_file():
             problems.append(f"{rel}: schema not found in registry ({schema_url})")
+        cert = doc.get("certificate") if isinstance(doc.get("certificate"), dict) else {}
+        cert_publisher = cert.get("publisher") if isinstance(cert.get("publisher"), dict) else {}
+        if str(cert_publisher.get("type") or "").upper() in PHONE_PRIVATE_TYPES and str(
+            cert_publisher.get("supportPhone") or ""
+        ) not in {"", PHONE_NOT_LISTED}:
+            problems.append(f"{rel}: certificate must not publish the phone of a {cert_publisher.get('type')} publisher")
         try:
             ok = verify_ed25519(key, destination_payload(doc), destination_signature(doc))
         except ValueError as exc:
