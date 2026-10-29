@@ -26,10 +26,10 @@
       "supportEmail": "support@xmarin.dev",
       "supportPhone": "Not listed"
     },
-    "quotaPolicy": "SPONSORED",
+    "quotaPolicy": "NORMAL",
     "createdAt": "2026-10-21T03:15:31Z",
     "issuedAt": "2026-10-21T03:15:31Z",
     "expiresAt": "2027-10-21T03:15:31Z",
-    "signature": "IF4oig5tR65YG7mUi3ARBHGhVKx4FTBKQ5ntBn/ub2WhYXnEy+dScWXvWs9WB8F2JYImMflxG0z7wIzGNhKnDA=="
+    "signature": "jvQbVYmUTvGI5b+tkA9gIPpQTrKSMLkLaiadoxF6dqQEgz2vEleCpLz0ke7rqkWquLhmTBJn/ITtre1WZLOBDg=="
   }
 }
