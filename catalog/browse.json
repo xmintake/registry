@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T21:39:01Z",
+  "generatedAt": "2026-10-29T01:56:40Z",
   "categories": [
     {
       "id": "health-wellness",
@@ -5717,6 +5717,7 @@
     {
       "id": "house-file",
       "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
       "name": "House file",
       "description": "A home walkthrough. House holds the building and its rooms. Fix holds snags, bills, and clips. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
       "source": "https://xmintake.github.io/registry/scenarios/xmintake/house-file.scenario.json",
@@ -5767,6 +5768,7 @@
     {
       "id": "job-round",
       "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
       "name": "Job round",
       "description": "A site call. Job holds the call and the scanned order. Gear holds faults and parts. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
       "source": "https://xmintake.github.io/registry/scenarios/xmintake/job-round.scenario.json",
@@ -5810,6 +5812,7 @@
     {
       "id": "stall-book",
       "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
       "name": "Stall book",
       "description": "A market stall. Goods holds items and batches. Market holds the day, sales slips, and invoices. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
       "source": "https://xmintake.github.io/registry/scenarios/xmintake/stall-book.scenario.json",
@@ -5860,6 +5863,7 @@
     {
       "id": "study-walk",
       "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
       "name": "Study walk",
       "description": "Field notes. Site holds the ground and samples. Record holds notes, scanned pages, and clips. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
       "source": "https://xmintake.github.io/registry/scenarios/xmintake/study-walk.scenario.json",
@@ -5910,6 +5914,7 @@
     {
       "id": "trip-book",
       "publisherSlug": "xmintake",
+      "publisherName": "XMIntake",
       "name": "Trip book",
       "description": "Travel capture. Trip holds the journey and tickets. Places holds visits and short videos. Each workspace is one spreadsheet. Codes can be scanned or tapped. Date fills itself.",
       "source": "https://xmintake.github.io/registry/scenarios/xmintake/trip-book.scenario.json",
