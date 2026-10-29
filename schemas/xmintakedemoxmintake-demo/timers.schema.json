@@ -1,0 +1,37 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintakedemoxmintake-demo.timers",
+  "schemaVersion": "0.1",
+  "description": "Intake Form",
+  "fields": {
+    "Title": {
+      "type": "string",
+      "label": "Title",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Start Time": {
+      "type": "datetime",
+      "label": "Start Time",
+      "nullable": false
+    },
+    "End Time": {
+      "type": "datetime",
+      "label": "End Time",
+      "nullable": false
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  },
+  "sharePayloadMapping": {
+    "sharedText": "Title"
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "uLS4hSsxxImTLutCUeU+tKkPzddl2zSxO2APejyvhMobCEF4cbVwfyPCfTmGF3rkM6Hv5Zkj703qwBYdukB7CQ=="
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T20:51:59Z",
+  "generatedAt": "2026-10-29T20:59:11Z",
   "categories": [
     {
       "id": "health-wellness",
@@ -5704,6 +5704,40 @@
           "name": "Location",
           "kind": "location",
           "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "timers",
+      "publisherSlug": "xmintakedemoxmintake-demo",
+      "publisherName": "XMIntake Demo",
+      "title": "Timers",
+      "description": "",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemoxmintake-demo/timers.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintakedemoxmintake-demo%2Ftimers.schema.json",
+      "linkedDestinationIds": [],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Start Time",
+          "kind": "datetime",
+          "required": true
+        },
+        {
+          "name": "End Time",
+          "kind": "datetime",
+          "required": true
         },
         {
           "name": "Notes",
