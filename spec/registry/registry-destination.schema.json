@@ -1,0 +1,387 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "title": "XMRegistry Destination",
+  "description": "Signed registry destination definition published by XMRegistry and installable into XMIntake workspace destinations.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "$schema",
+    "id",
+    "source",
+    "title",
+    "description",
+    "color",
+    "destinationType",
+    "registryStatus",
+    "createdAt",
+    "issuedAt",
+    "expiresAt",
+    "certificate"
+  ],
+
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "enum": [
+        "https://xmintake.github.io/data-schemas/spec/registry/registry-destination.schema.json",
+        "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json"
+      ],
+      "description": "JSON Schema reference for editor validation of this destination file."
+    },
+
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$",
+      "description": "Stable destination identifier (slug). Used for display, apiSlug generation, and config keys."
+    },
+
+    "source": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical registry URL for this destination. Must not change over the destination lifetime."
+    },
+
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable destination title shown in XMIntake."
+    },
+
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Short description of the destination purpose and publisher context."
+    },
+
+    "color": {
+      "$ref": "#/$defs/color",
+      "description": "Accent color for destination UI (publisher default; may be overridden locally after install)."
+    },
+
+    "destinationType": {
+      "type": "string",
+      "enum": ["GOOGLE_SHEET", "CUSTOM_API"],
+      "description": "Destination routing type. GOOGLE_SHEET maps to workspace kind sheet; CUSTOM_API maps to workspace kind api."
+    },
+
+    "sheetMode": {
+      "type": "string",
+      "enum": ["SHARED", "TEMPLATE"],
+      "description": "Google Sheet sharing model. SHARED: all installers write to the published spreadsheetId/gid. TEMPLATE: each installer creates a personal spreadsheet from the published schema and stores rows in that personal sheet."
+    },
+
+    "autosubmitSupported": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, installers may be prompted to allow deep-link autosubmit (as=1) for this destination. Does not force autosubmit."
+    },
+
+    "visibility": {
+      "type": "string",
+      "enum": ["PUBLIC", "UNLISTED", "RESTRICTED"],
+      "description": "Catalog and access policy. PUBLIC appears in browse; UNLISTED is installable via direct link only."
+    },
+
+    "distribution": {
+      "type": "string",
+      "enum": ["PUBLIC", "PRIVATE"],
+      "description": "Where the artifact is served. PUBLIC (the default when absent) is the public registry. PRIVATE is reserved for organization audiences and is not published yet."
+    },
+
+    "audience": {
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$",
+      "description": "Named audience on the publisher record. Only meaningful with distribution PRIVATE."
+    },
+
+    "tags": {
+      "type": "array",
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9](?:[a-z0-9-]{0,30}[a-z0-9])?$"
+      },
+      "description": "Optional search tags (lowercase slugs)."
+    },
+
+    "primaryCategory": {
+      "type": "string",
+      "description": "Optional browse category id from catalog/categories.json."
+    },
+
+    "attachmentPolicy": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/attachmentPolicy" }
+      ],
+      "description": "Shared Drive folder policy when the intake schema defines attachment fields and sheetMode is SHARED."
+    },
+
+    "registryStatus": {
+      "type": "string",
+      "enum": ["ACTIVE", "DEPRECATED", "RETIRED", "REVOKED"],
+      "description": "Registry lifecycle status at publish time. Only ACTIVE destinations may be installed."
+    },
+
+    "createdAt": {
+      "$ref": "#/$defs/dateTime",
+      "description": "When this destination definition was first created. Must equal certificate.createdAt."
+    },
+
+    "issuedAt": {
+      "$ref": "#/$defs/dateTime",
+      "description": "When the current certificate was issued. Must equal certificate.issuedAt."
+    },
+
+    "expiresAt": {
+      "$ref": "#/$defs/dateTime",
+      "description": "When the current certificate expires. Must equal certificate.expiresAt."
+    },
+
+    "replacementUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Optional URL of the replacement destination when registryStatus is DEPRECATED."
+    },
+
+    "spreadsheetId": {
+      "$ref": "#/$defs/spreadsheetId",
+      "description": "Google Sheets spreadsheet ID. Required for GOOGLE_SHEET destinations when sheetMode is SHARED."
+    },
+
+    "gid": {
+      "$ref": "#/$defs/gid",
+      "description": "Google Sheets tab gid. Required for GOOGLE_SHEET destinations when sheetMode is SHARED."
+    },
+
+    "endpointUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "HTTPS POST endpoint URL. Required when destinationType is CUSTOM_API."
+    },
+
+    "schemaUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the XMIntake intake schema JSON. Required when destinationType is CUSTOM_API."
+    },
+
+    "apiAuth": {
+      "type": "string",
+      "enum": ["API_KEY", "GOOGLE_ID_TOKEN", "NONE"],
+      "description": "Authentication method for CUSTOM_API uploads. API_KEY prompts for a local key; GOOGLE_ID_TOKEN uses the app default OAuth Web client; NONE sends no auth headers."
+    },
+
+    "certificate": {
+      "$ref": "#/$defs/certificate",
+      "description": "XMRegistry-signed certificate covering this destination definition (except certificate.signature)."
+    }
+  },
+
+  "allOf": [
+    {
+      "if": {
+        "properties": { "destinationType": { "const": "GOOGLE_SHEET" } },
+        "required": ["destinationType"]
+      },
+      "then": {
+        "required": ["schemaUrl"],
+        "properties": {
+          "endpointUrl": false,
+          "apiAuth": false
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "destinationType": { "const": "GOOGLE_SHEET" },
+          "sheetMode": { "const": "SHARED" }
+        },
+        "required": ["destinationType", "sheetMode"]
+      },
+      "then": {
+        "required": ["spreadsheetId", "gid"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "destinationType": { "const": "GOOGLE_SHEET" },
+          "sheetMode": { "const": "TEMPLATE" }
+        },
+        "required": ["destinationType", "sheetMode"]
+      },
+      "then": {
+        "properties": {
+          "spreadsheetId": false,
+          "gid": false
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "destinationType": { "const": "CUSTOM_API" } },
+        "required": ["destinationType"]
+      },
+      "then": {
+        "required": ["endpointUrl", "schemaUrl", "apiAuth"],
+        "properties": {
+          "spreadsheetId": false,
+          "gid": false
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "registryStatus": { "enum": ["ACTIVE", "RETIRED", "REVOKED"] } },
+        "required": ["registryStatus"]
+      },
+      "then": {
+        "properties": {
+          "replacementUrl": false
+        }
+      }
+    }
+  ],
+
+  "$defs": {
+    "color": {
+      "type": "string",
+      "pattern": "^#([0-9a-fA-F]{6})$",
+      "description": "Six-digit hex color with leading hash."
+    },
+
+    "dateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 date-time in UTC."
+    },
+
+    "spreadsheetId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9-_]{20,}$",
+      "description": "Google Sheets spreadsheet identifier."
+    },
+
+    "gid": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "Google Sheets worksheet gid (numeric string)."
+    },
+
+    "attachmentPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "folderUrl"],
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "const": true,
+          "description": "When present, attachments are expected for this destination."
+        },
+        "folderUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "description": "Shared Google Drive folder URL for attachment uploads."
+        }
+      }
+    },
+
+    "publisherType": {
+      "type": "string",
+      "enum": [
+        "BUSINESS",
+        "NONPROFIT",
+        "INDIVIDUAL",
+        "EDUCATION",
+        "GOVERNMENT",
+        "COMMUNITY"
+      ],
+      "description": "Publisher organization category."
+    },
+
+    "quotaPolicy": {
+      "type": "string",
+      "enum": ["NORMAL", "SPONSORED", "EXEMPT"],
+      "description": "Upload quota policy certified by XMRegistry. SPONSORED and EXEMPT bypass plan quotas when the certificate signature is valid."
+    },
+
+    "publisher": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Organization or individual responsible for the destination endpoint and support.",
+      "required": ["name", "type", "supportEmail", "supportPhone"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Publisher display name."
+        },
+        "type": {
+          "$ref": "#/$defs/publisherType"
+        },
+        "website": {
+          "type": "string",
+          "description": "Publisher website URL (https). Optional for INDIVIDUAL; required for other types at registration time. Empty string allowed when omitted for individuals.",
+          "pattern": "^(https://.+)?$"
+        },
+        "supportEmail": {
+          "type": "string",
+          "format": "email",
+          "description": "Publisher support email address."
+        },
+        "supportPhone": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Publisher support phone number."
+        }
+      }
+    },
+
+    "certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Signed certificate metadata. The signature covers the entire destination document except certificate.signature.",
+      "required": [
+        "publisher",
+        "quotaPolicy",
+        "createdAt",
+        "issuedAt",
+        "expiresAt",
+        "signature"
+      ],
+      "properties": {
+        "publisher": {
+          "$ref": "#/$defs/publisher"
+        },
+        "quotaPolicy": {
+          "$ref": "#/$defs/quotaPolicy"
+        },
+        "createdAt": {
+          "$ref": "#/$defs/dateTime",
+          "description": "Certificate creation timestamp. Must equal top-level createdAt."
+        },
+        "issuedAt": {
+          "$ref": "#/$defs/dateTime",
+          "description": "Certificate issue timestamp. Must equal top-level issuedAt."
+        },
+        "expiresAt": {
+          "$ref": "#/$defs/dateTime",
+          "description": "Certificate expiration timestamp. Must equal top-level expiresAt."
+        },
+        "signature": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9+/]{86}==$",
+          "description": "Base64-encoded Ed25519 signature over the canonical destination JSON (UTF-8), excluding this field."
+        }
+      }
+    }
+  }
+}

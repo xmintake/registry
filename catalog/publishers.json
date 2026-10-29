@@ -1,16 +1,20 @@
 {
-  "generatedAt": "2026-10-21T21:39:01Z",
+  "generatedAt": "2026-10-29T01:56:40Z",
   "publishers": [
     {
       "publisherSlug": "xmintake",
-      "publisherId": "pub_xmintake",
       "publisherStatus": "ACTIVE",
       "name": "XMIntake",
       "type": "COMMUNITY",
+      "tagline": null,
       "website": "https://www.xmarin.dev",
       "supportEmail": "support@xmarin.dev",
-      "supportPhone": "+1-765-532-6151",
-      "tagline": null
+      "joinedAt": "2026-08-18",
+      "counts": {
+        "destinations": 53,
+        "schemas": 53,
+        "scenarios": 5
+      }
     }
   ]
 }

@@ -1,0 +1,47 @@
+name: Verify and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: registry-pages
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Verify signatures and public-only content
+        run: python3 .github/scripts/verify_registry.py --root .
+
+      - name: Assemble site
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/site"
+          for entry in destinations schemas scenarios catalog meta spec assets index.html 404.html CNAME XMRegistry.public-key.pem; do
+            if [ -e "$entry" ]; then cp -R "$entry" "$RUNNER_TEMP/site/"; fi
+          done
+          touch "$RUNNER_TEMP/site/.nojekyll"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/site
+
+  deploy:
+    needs: verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

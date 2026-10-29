@@ -79,6 +79,26 @@
       "type": "boolean",
       "default": false,
       "description": "When true, for shared links resolve page title and store as HYPERLINK(url, title) in the sharedText field."
+    },
+    "visibility": {
+      "type": "string",
+      "enum": ["PUBLIC", "UNLISTED"],
+      "description": "XMRegistry listing. PUBLIC appears on the browse site; UNLISTED is reachable by URL only."
+    },
+    "distribution": {
+      "type": "string",
+      "enum": ["PUBLIC", "PRIVATE"],
+      "description": "Where XMRegistry serves the schema. PUBLIC (the default when absent) is the public registry; PRIVATE is reserved."
+    },
+    "signature": {
+      "type": "object",
+      "description": "XMRegistry Ed25519 signature over the canonical JSON of the schema without this field.",
+      "required": ["type", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "ed25519" },
+        "value": { "type": "string", "minLength": 1 }
+      }
     }
   },
   "definitions": {
