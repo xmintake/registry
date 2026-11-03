@@ -1,0 +1,32 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "timers",
+  "source": "https://xmintake.github.io/registry/destinations/xmintakedemo/timers.destination.json",
+  "title": "Timers",
+  "description": "Simple event timer with start and stop times.",
+  "color": "#2196F3",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "autosubmitSupported": false,
+  "visibility": "PUBLIC",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemo/timers.schema.json",
+  "tags": [],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-11-03T23:44:13Z",
+  "issuedAt": "2026-11-03T23:44:13Z",
+  "expiresAt": "2027-11-03T23:44:13Z",
+  "certificate": {
+    "publisher": {
+      "name": "xmintakedemo",
+      "type": "INDIVIDUAL",
+      "website": "",
+      "supportEmail": "xmintakedemo@gmail.com",
+      "supportPhone": "Not listed"
+    },
+    "quotaPolicy": "NORMAL",
+    "createdAt": "2026-11-03T23:44:13Z",
+    "issuedAt": "2026-11-03T23:44:13Z",
+    "expiresAt": "2027-11-03T23:44:13Z",
+    "signature": "rh+7KNTzKBWh9lIukYIRPNl6N71g2cG0SkzUlDPf/XN5xEl39am/HrDVPKM63jwudcxTZkTYuphsa5ZNsjCqBg=="
+  }
+}

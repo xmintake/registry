@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T23:11:29Z",
+  "generatedAt": "2026-11-03T23:44:13Z",
   "categories": [
     {
       "id": "health-wellness",
@@ -3017,6 +3017,45 @@
           "required": false
         }
       ]
+    },
+    {
+      "id": "timers",
+      "publisherSlug": "xmintakedemo",
+      "publisherName": "xmintakedemo",
+      "title": "Timers",
+      "description": "Simple event timer with start and stop times.",
+      "color": "#2196F3",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintakedemo/timers.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemo/timers.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintakedemo%2Ftimers.destination.json",
+      "tags": [],
+      "primaryCategory": null,
+      "issuedAt": "2026-11-03T23:44:13Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Start Time",
+          "kind": "datetime",
+          "required": true
+        },
+        {
+          "name": "End Time",
+          "kind": "datetime",
+          "required": true
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
     }
   ],
   "schemas": [
@@ -5704,6 +5743,42 @@
           "name": "Location",
           "kind": "location",
           "required": false
+        },
+        {
+          "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "timers",
+      "publisherSlug": "xmintakedemo",
+      "publisherName": "xmintakedemo",
+      "title": "Timers",
+      "description": "Simple event timer with start and stop times.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemo/timers.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintakedemo%2Ftimers.schema.json",
+      "linkedDestinationIds": [
+        "timers"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Start Time",
+          "kind": "datetime",
+          "required": true
+        },
+        {
+          "name": "End Time",
+          "kind": "datetime",
+          "required": true
         },
         {
           "name": "Notes",

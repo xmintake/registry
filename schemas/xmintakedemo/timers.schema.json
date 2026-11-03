@@ -1,0 +1,38 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintakedemo.timers",
+  "schemaVersion": "0.1",
+  "title": "Timers",
+  "description": "Simple event timer with start and stop times.",
+  "fields": {
+    "Title": {
+      "type": "string",
+      "label": "Title",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Start Time": {
+      "type": "datetime",
+      "label": "Start Time",
+      "nullable": false
+    },
+    "End Time": {
+      "type": "datetime",
+      "label": "End Time",
+      "nullable": false
+    },
+    "Notes": {
+      "type": "string",
+      "label": "Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  },
+  "sharePayloadMapping": {
+    "sharedText": "Title"
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "nVetLTltuC1QXeHV0PSMRtxydDNrf4MtYbx3XlTRWqMieORAwVw3724d98hByWzoSzi8toHAd8VWdVjtJyDHCQ=="
+  }
+}

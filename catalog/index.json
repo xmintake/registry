@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T23:11:29Z",
+  "generatedAt": "2026-11-03T23:44:13Z",
   "destinations": [
     {
       "id": "appointment",
@@ -731,6 +731,17 @@
         "workout"
       ],
       "primaryCategory": "health-wellness"
+    },
+    {
+      "id": "timers",
+      "title": "Timers",
+      "description": "Simple event timer with start and stop times.",
+      "destinationType": "GOOGLE_SHEET",
+      "source": "https://xmintake.github.io/registry/destinations/xmintakedemo/timers.destination.json",
+      "publisherSlug": "xmintakedemo",
+      "publisherName": "xmintakedemo",
+      "tags": [],
+      "primaryCategory": null
     }
   ]
 }

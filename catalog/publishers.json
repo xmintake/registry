@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T23:11:29Z",
+  "generatedAt": "2026-11-03T23:44:13Z",
   "publishers": [
     {
       "publisherSlug": "xmintake",
@@ -26,8 +26,8 @@
       "supportEmail": "xmintakedemo@gmail.com",
       "joinedAt": "2026-11-03",
       "counts": {
-        "destinations": 0,
-        "schemas": 0,
+        "destinations": 1,
+        "schemas": 1,
         "scenarios": 0
       }
     }
