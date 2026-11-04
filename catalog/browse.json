@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T04:00:43Z",
+  "generatedAt": "2026-11-04T04:02:24Z",
   "categories": [
     {
       "id": "health-wellness",
@@ -3023,7 +3023,7 @@
       "publisherSlug": "xmintakedemo",
       "publisherName": "xmintakedemo",
       "title": "Talking Points",
-      "description": "Sample talking points log.",
+      "description": "Sample talking points log",
       "color": "#FF9800",
       "destinationType": "GOOGLE_SHEET",
       "visibility": "PUBLIC",
@@ -3031,8 +3031,8 @@
       "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemo/talking-points.schema.json",
       "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintakedemo%2Ftalking-points.destination.json",
       "tags": [],
-      "primaryCategory": null,
-      "issuedAt": "2026-11-04T04:00:43Z",
+      "primaryCategory": "other",
+      "issuedAt": "2026-11-04T04:02:24Z",
       "hasAttachments": false,
       "previewFields": [
         {
@@ -5790,7 +5790,7 @@
       "publisherSlug": "xmintakedemo",
       "publisherName": "xmintakedemo",
       "title": "Talking Points",
-      "description": "Sample talking points log.",
+      "description": "Sample talking points log",
       "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemo/talking-points.schema.json",
       "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintakedemo%2Ftalking-points.schema.json",
       "linkedDestinationIds": [

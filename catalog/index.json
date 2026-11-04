@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T04:00:43Z",
+  "generatedAt": "2026-11-04T04:02:24Z",
   "destinations": [
     {
       "id": "appointment",
@@ -735,13 +735,13 @@
     {
       "id": "talking-points",
       "title": "Talking Points",
-      "description": "Sample talking points log.",
+      "description": "Sample talking points log",
       "destinationType": "GOOGLE_SHEET",
       "source": "https://xmintake.github.io/registry/destinations/xmintakedemo/talking-points.destination.json",
       "publisherSlug": "xmintakedemo",
       "publisherName": "xmintakedemo",
       "tags": [],
-      "primaryCategory": null
+      "primaryCategory": "other"
     },
     {
       "id": "timers",

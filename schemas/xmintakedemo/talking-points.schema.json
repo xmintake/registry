@@ -3,7 +3,7 @@
   "schemaId": "xmintakedemo.talking-points",
   "schemaVersion": "0.1",
   "title": "Talking Points",
-  "description": "Sample talking points log.",
+  "description": "Sample talking points log",
   "fields": {
     "Title": {
       "type": "string",
@@ -29,6 +29,6 @@
   },
   "signature": {
     "type": "ed25519",
-    "value": "ErdRyX11Im7JZU8lmM3YLLeyOoz0+38LKtjNSfOLTdnHxZwUsXuzycCszwgnB8T8WbI6WXP9vXaRypxUK+BICg=="
+    "value": "R8NNTqZmao5xcKl2AlcWVSD21HV+R24qfluyGL2nxehAPiSyClZfo4EToJMlnsyEFG1Y2ecrw+x0ZrhV4KWsBQ=="
   }
 }
