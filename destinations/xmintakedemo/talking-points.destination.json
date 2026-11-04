@@ -1,0 +1,32 @@
+{
+  "$schema": "https://xmintake.github.io/registry/spec/registry/registry-destination.schema.json",
+  "id": "talking-points",
+  "source": "https://xmintake.github.io/registry/destinations/xmintakedemo/talking-points.destination.json",
+  "title": "Talking Points",
+  "description": "Sample talking points log.",
+  "color": "#FF9800",
+  "destinationType": "GOOGLE_SHEET",
+  "sheetMode": "TEMPLATE",
+  "autosubmitSupported": false,
+  "visibility": "PUBLIC",
+  "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemo/talking-points.schema.json",
+  "tags": [],
+  "registryStatus": "ACTIVE",
+  "createdAt": "2026-11-04T04:00:43Z",
+  "issuedAt": "2026-11-04T04:00:43Z",
+  "expiresAt": "2027-11-04T04:00:43Z",
+  "certificate": {
+    "publisher": {
+      "name": "xmintakedemo",
+      "type": "INDIVIDUAL",
+      "website": "",
+      "supportEmail": "xmintakedemo@gmail.com",
+      "supportPhone": "Not listed"
+    },
+    "quotaPolicy": "NORMAL",
+    "createdAt": "2026-11-04T04:00:43Z",
+    "issuedAt": "2026-11-04T04:00:43Z",
+    "expiresAt": "2027-11-04T04:00:43Z",
+    "signature": "P3+UabxMxC+9OzoxwAmhFpuCdVRfMfh9MbwxpWCe8NhwTmtCKrxIPRfv8Wyaf5sMtOl7xf9SpjlQL1VqfvjaAA=="
+  }
+}

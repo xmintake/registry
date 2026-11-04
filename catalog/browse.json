@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T03:22:38Z",
+  "generatedAt": "2026-11-04T04:00:43Z",
   "categories": [
     {
       "id": "health-wellness",
@@ -3019,6 +3019,40 @@
       ]
     },
     {
+      "id": "talking-points",
+      "publisherSlug": "xmintakedemo",
+      "publisherName": "xmintakedemo",
+      "title": "Talking Points",
+      "description": "Sample talking points log.",
+      "color": "#FF9800",
+      "destinationType": "GOOGLE_SHEET",
+      "visibility": "PUBLIC",
+      "source": "https://xmintake.github.io/registry/destinations/xmintakedemo/talking-points.destination.json",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemo/talking-points.schema.json",
+      "installUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fdestinations%2Fxmintakedemo%2Ftalking-points.destination.json",
+      "tags": [],
+      "primaryCategory": null,
+      "issuedAt": "2026-11-04T04:00:43Z",
+      "hasAttachments": false,
+      "previewFields": [
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Details",
+          "kind": "long_text",
+          "required": true
+        },
+        {
+          "name": "Other Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
       "id": "timers",
       "publisherSlug": "xmintakedemo",
       "publisherName": "xmintakedemo",
@@ -5746,6 +5780,37 @@
         },
         {
           "name": "Notes",
+          "kind": "long_text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "talking-points",
+      "publisherSlug": "xmintakedemo",
+      "publisherName": "xmintakedemo",
+      "title": "Talking Points",
+      "description": "Sample talking points log.",
+      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemo/talking-points.schema.json",
+      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintakedemo%2Ftalking-points.schema.json",
+      "linkedDestinationIds": [
+        "talking-points"
+      ],
+      "tags": [],
+      "primaryCategory": null,
+      "previewFields": [
+        {
+          "name": "Title",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "Details",
+          "kind": "long_text",
+          "required": true
+        },
+        {
+          "name": "Other Notes",
           "kind": "long_text",
           "required": false
         }

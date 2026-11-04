@@ -1,0 +1,34 @@
+{
+  "$schema": "https://xmintake.github.io/registry/meta/xmintake-schema.v1.json",
+  "schemaId": "xmintakedemo.talking-points",
+  "schemaVersion": "0.1",
+  "title": "Talking Points",
+  "description": "Sample talking points log.",
+  "fields": {
+    "Title": {
+      "type": "string",
+      "label": "Title",
+      "nullable": false,
+      "uiVariant": "single_line"
+    },
+    "Details": {
+      "type": "string",
+      "label": "Details",
+      "nullable": false,
+      "uiVariant": "multi_line"
+    },
+    "Other Notes": {
+      "type": "string",
+      "label": "Other Notes",
+      "nullable": true,
+      "uiVariant": "multi_line"
+    }
+  },
+  "sharePayloadMapping": {
+    "sharedText": "Title"
+  },
+  "signature": {
+    "type": "ed25519",
+    "value": "ErdRyX11Im7JZU8lmM3YLLeyOoz0+38LKtjNSfOLTdnHxZwUsXuzycCszwgnB8T8WbI6WXP9vXaRypxUK+BICg=="
+  }
+}
