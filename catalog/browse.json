@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T03:10:23Z",
+  "generatedAt": "2026-11-04T03:22:38Z",
   "categories": [
     {
       "id": "health-wellness",
@@ -5743,35 +5743,6 @@
           "name": "Location",
           "kind": "location",
           "required": false
-        },
-        {
-          "name": "Notes",
-          "kind": "long_text",
-          "required": false
-        }
-      ]
-    },
-    {
-      "id": "talking-points",
-      "publisherSlug": "xmintakedemo",
-      "publisherName": "xmintakedemo",
-      "title": "Talking Points",
-      "description": "Talking points recorder.",
-      "schemaUrl": "https://xmintake.github.io/registry/schemas/xmintakedemo/talking-points.schema.json",
-      "useSchemaUrl": "https://xmintake.xmarin.dev/x/share?text=https%3A%2F%2Fxmintake.github.io%2Fregistry%2Fschemas%2Fxmintakedemo%2Ftalking-points.schema.json",
-      "linkedDestinationIds": [],
-      "tags": [],
-      "primaryCategory": null,
-      "previewFields": [
-        {
-          "name": "Title",
-          "kind": "text",
-          "required": true
-        },
-        {
-          "name": "Description",
-          "kind": "long_text",
-          "required": true
         },
         {
           "name": "Notes",
