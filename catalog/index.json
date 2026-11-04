@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T03:03:34Z",
+  "generatedAt": "2026-11-04T03:10:23Z",
   "destinations": [
     {
       "id": "appointment",
@@ -731,17 +731,6 @@
         "workout"
       ],
       "primaryCategory": "health-wellness"
-    },
-    {
-      "id": "talking-points",
-      "title": "Talking Points",
-      "description": "Talking points recorder.",
-      "destinationType": "GOOGLE_SHEET",
-      "source": "https://xmintake.github.io/registry/destinations/xmintakedemo/talking-points.destination.json",
-      "publisherSlug": "xmintakedemo",
-      "publisherName": "xmintakedemo",
-      "tags": [],
-      "primaryCategory": null
     },
     {
       "id": "timers",
